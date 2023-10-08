@@ -22,66 +22,50 @@ import order_truck from "./Assets/Images/home-order-sec-icons/order-2.svg";
 import order_pizza from "./Assets/Images/home-order-sec-icons/order-3.svg";
 
 export const CONFIG = {
-    home_slider_data: [
-        {
-            id: 1,
-            title: "quality foods",
-            desc: "healthy food for healthy body",
-            main_image: pizza_1,
-            icons: [
-                greens_1,
-                greens_2,
-                greens_3,
-                greens_4,
-            ]
-        },
-        {
-            id: 2,
-            title: "quality foods",
-            desc: "healthy food for healthy body",
-            main_image: pizza_2,
-            icons: [
-                tomato_1,
-                greens_5,
-                onion_1,
-                onion_2,
-                tomato_2,
-                onion_3
-            ]
-        },
-        {
-            id: 3,
-            title: "quality foods",
-            desc: "healthy food for healthy body",
-            main_image: pizza_3,
-            icons: [
-                onion_4,
-                tomato_3,
-                pepper_1,
-                greens_6,
-                pepper_2,
-                onion_5
-            ]
-        }
-    ],
-    home_order_info: [
-        {
-            id: 1,
-            title: "order your food",
-            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius -",
-            img: order_plate
-        },
-        {
-            id: 2,
-            title: "delivery or pick up",
-            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius -",
-            img: order_truck
-        },
-        {
-            id: 3,
-            title: "delicious receipe",
-            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius -",
-            img: order_pizza
-        }
-    ]
+  home_slider_data: [
+    {
+      id: 1,
+      title: "quality foods",
+      desc: "healthy food for healthy body",
+      main_image: pizza_1,
+      icons: [greens_1, greens_2, greens_3, greens_4],
+    },
+    {
+      id: 2,
+      title: "quality foods",
+      desc: "healthy food for healthy body",
+      main_image: pizza_2,
+      icons: [tomato_1, greens_5, onion_1, onion_2, tomato_2, onion_3],
+    },
+    {
+      id: 3,
+      title: "quality foods",
+      desc: "healthy food for healthy body",
+      main_image: pizza_3,
+      icons: [onion_4, tomato_3, pepper_1, greens_6, pepper_2, onion_5],
+    },
+  ],
+  home_order_info: [
+    {
+      id: 1,
+      title: "order your food",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius -",
+      img: order_plate,
+    },
+    {
+      id: 2,
+      title: "delivery or pick up",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius -",
+      img: order_truck,
+    },
+    {
+      id: 3,
+      title: "delicious receipe",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius -",
+      img: order_pizza,
+    },
+  ],
 };
