@@ -6,4 +6,8 @@
 
 :root {
   --global-max-width: 1300px;
+  --template-font: 'PT Sans Narrow', sans-serif;
+  --template-yellow: #fd9d3e;
+  --white: #fff;
+  --black: #000;
 }
