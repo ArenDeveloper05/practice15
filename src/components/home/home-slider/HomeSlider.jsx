@@ -11,6 +11,11 @@ import Slide from "./slide/Slide";
 const HomeSlider = () => {
   const homeSliderData = CONFIG.home_slider_data;
   return (
+    <section>
+      <Container>
+        
+        {/* KODY GRUM ENQ AYSTEX, QANI VOR CONTAINER COMPONENTY APAHOVEL E MAX-WIDTH EV MARGIN: AUTO */}
+      </Container>
     <section className="home-slider">
       <Swiper
         modules={[Navigation, A11y, Autoplay]}
