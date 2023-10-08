@@ -6,4 +6,5 @@
 
 :root {
   --global-max-width: 1300px;
+  --slider-min-height: 700px;
 }
