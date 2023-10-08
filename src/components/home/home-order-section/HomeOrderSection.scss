@@ -11,12 +11,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 48px;
+    gap: 36px;
   }
 
   &-item {
     max-width: 380px;
-    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -24,6 +23,8 @@
     font-family: "PT Sans Narrow", sans-serif;
     cursor: pointer;
     padding: 0 16px;
+    animation: smoothAppearenceFromBottom 1s both;
+    display: none;
     img {
       width: 90px;
       height: 90px;
@@ -61,5 +62,21 @@
     z-index: 1;
     object-fit: cover;
     padding: 0 24px;
+  }
+}
+
+.smooth-animation {
+  display: flex;
+  animation: smoothAppearenceFromBottom 1s both;
+}
+
+@keyframes smoothAppearenceFromBottom {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 200px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }
