@@ -16,4 +16,5 @@ body{
   --global-max-width: 1300px;
   --bs-gutter-y: 0;
   --bs-gutter-x: 24px;
+  --slider-min-height: 700px;
 }
