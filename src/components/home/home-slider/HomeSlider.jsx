@@ -23,9 +23,6 @@ const HomeSlider = () => {
           delay: 5000,
         }}
         onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={(swiper) => {
-          console.log(swiper.activeIndex);
-        }}
       >
         {homeSliderData.map(({ id, title, main_image, desc, icons }) => {
           return (

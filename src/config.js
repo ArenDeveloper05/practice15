@@ -17,7 +17,9 @@ import onion_4 from "./Assets/Images/home-slider-images/pizza-7.png";
 import onion_5 from "./Assets/Images/home-slider-images/pizza-12.png";
 import pepper_1 from "./Assets/Images/home-slider-images/pizza-9.png";
 import pepper_2 from "./Assets/Images/home-slider-images/pizza-11.png";
-
+import order_plate from "./Assets/Images/home-order-sec-icons/order-1.svg";
+import order_truck from "./Assets/Images/home-order-sec-icons/order-2.svg";
+import order_pizza from "./Assets/Images/home-order-sec-icons/order-3.svg";
 
 export const CONFIG = {
     home_slider_data: [
@@ -61,6 +63,25 @@ export const CONFIG = {
                 onion_5
             ]
         }
+    ],
+    home_order_info: [
+        {
+            id: 1,
+            title: "order your food",
+            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius -",
+            img: order_plate
+        },
+        {
+            id: 2,
+            title: "delivery or pick up",
+            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius -",
+            img: order_truck
+        },
+        {
+            id: 3,
+            title: "delicious receipe",
+            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius -",
+            img: order_pizza
+        }
     ]
 };
-
