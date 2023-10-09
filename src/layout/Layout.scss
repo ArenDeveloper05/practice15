@@ -26,9 +26,9 @@ header {
     top: 0;
     width: 100%;
     z-index: 999;
-    padding: 16px 0;
+    padding: 15px 0 10px 0;
     background: transparent;
-    transition: all 400ms ease;
+    @include transition;
     > .container {
         > .row {
             display: flex;
@@ -38,6 +38,9 @@ header {
             > .logo {
                 @include cursor; // Here is example of @include
                 margin-left: 15px;
+                > img {
+                    @include transition;
+                }
             }
             > ul {
                 display: flex;
@@ -109,7 +112,20 @@ header {
         }
     }
 }
-
+.fixed {
+    background-color: #121619;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.1);
+    padding: 10px 0 8px 0;
+    @include transition;
+    > .container > .row {
+        .logo {
+            > img {
+                transform: scale3d(.8, .8, 1);
+                @include transition;
+            }
+        }
+    }
+}
 .menu-dropdown, .blog-dropdown, .pages-dropdown {
     visibility: hidden;
     opacity: 0;
