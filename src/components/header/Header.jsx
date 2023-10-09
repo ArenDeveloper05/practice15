@@ -1,9 +1,9 @@
-import CONFIG from "../../config";
 import Container from "../common/container/Container";
-import logo from "../../assets/header-images/header-logo.png";
+import logo from "../../Assets/header-images/header-logo.png";
 import Menu from "./menu/Menu";
 import Blog from "./blog/Blog";
 import Pages from "./pages/Pages";
+import { CONFIG } from "../../config";
 const Header = () => {
 
   return (

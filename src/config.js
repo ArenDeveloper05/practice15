@@ -1,11 +1,11 @@
 import {BsTelephone} from "react-icons/bs";
 import {SlHandbag} from "react-icons/sl";
-import pepperoni from "./assets/header-images/menu-list-images/pepperoni.png";
-import vegetarian from "./assets/header-images/menu-list-images/vegetarian.png";
-import specialty from "./assets/header-images/menu-list-images/specialty.png";
-import hamCheese from "./assets/header-images/menu-list-images/hamCheese.png";
-import onion from "./assets/header-images/menu-list-images/onion.png";
-import margherita from "./assets/header-images/menu-list-images/margherita.png";
+import pepperoni from "./Assets/header-images/menu-list-images/pepperoni.png";
+import vegetarian from "./Assets/header-images/menu-list-images/vegetarian.png";
+import specialty from "./Assets/header-images/menu-list-images/specialty.png";
+import hamCheese from "./Assets/header-images/menu-list-images/hamCheese.png";
+import onion from "./Assets/header-images/menu-list-images/onion.png";
+import margherita from "./Assets/header-images/menu-list-images/margherita.png";
 // const CONFIG = {
     
 // }

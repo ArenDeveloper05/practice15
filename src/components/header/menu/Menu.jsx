@@ -1,5 +1,6 @@
+import { CONFIG } from '../../../config'
 import Container from '../../common/container/Container'
-import CONFIG from '../../../config'
+
 const Menu = () => {
   return (
     <div className="menu-dropdown">
