@@ -1,10 +1,11 @@
 import Container from "../common/container/Container";
-import logo from "../../Assets/header-images/header-logo.png";
+import logo from "../../assets/header-images/header-logo.png";
 import Menu from "./menu/Menu";
 import Blog from "./blog/Blog";
 import Pages from "./pages/Pages";
 import { CONFIG } from "../../config";
 import { useEffect, useState } from "react";
+
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -19,29 +20,36 @@ const Header = () => {
     };
 
     // Add the scroll event listener when the component mounts
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Remove the scroll event listener when the component unmounts
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <header className={scrolled ? "fixed" : ""}>
       <Container>
-       <div className="row">
-        <div className="logo">
+        <div className="row">
+          <div className="logo">
             <img src={logo} alt="" />
-        </div>
-        <ul>
-            {
-              CONFIG.headerConfig.map(({id, title, icon}) => {
-                return (
-                  <li 
-                    className={id === 2 ? "menu-item" : id === 3 ? "blog-item" : id === 5 ? "page-item" : null}
-                    key={id}
-                  >
+          </div>
+          <ul>
+            {CONFIG.headerConfig.map(({ id, title, icon }) => {
+              return (
+                <li
+                  className={
+                    id === 2
+                      ? "menu-item"
+                      : id === 3
+                      ? "blog-item"
+                      : id === 5
+                      ? "page-item"
+                      : null
+                  }
+                  key={id}
+                >
                   {icon}
                   {icon}
                   {title}
@@ -49,13 +57,13 @@ const Header = () => {
                   {id === 3 ? <Blog /> : null}
                   {id === 5 ? <Pages /> : null}
                 </li>
-                )
-              })
-            }
-        </ul>
-       </div>
+              );
+            })}
+          </ul>
+        </div>
       </Container>
-    </header>)
+    </header>
+  );
 };
 
 export default Header;

@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 export const LatestNews = () => {
   const newsdata = useSelector((state) => state.latestNews.latestNewsData);
-  const navigate= useNavigate();
+  const navigate = useNavigate();
   //   console.log(newsdata);
   return (
     <section className="news">
@@ -18,10 +18,13 @@ export const LatestNews = () => {
           {newsdata.map(
             ({ id, img, date1, date2, by, comment, title, more }) => {
               return (
-                <div className="news-info-details" key={id}
-                onClick={()=>{
-                    navigate("/blog-details")
-                }}>
+                <div
+                  className="news-info-details"
+                  key={id}
+                  onClick={() => {
+                    navigate("/blog-details");
+                  }}
+                >
                   <div className="news-info-details-img">
                     <img src={img} alt="" />
                     <div className="news-info-details-img-date">
@@ -29,7 +32,7 @@ export const LatestNews = () => {
                         {date1} <br /> {date2}
                       </span>
                     </div>
-                  <div className="bg"></div>
+                    <div className="bg"></div>
                   </div>
                   <div className="news-info-details-author">
                     <p>{by}</p>

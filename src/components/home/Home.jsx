@@ -8,7 +8,7 @@ const Home = () => {
     <div className="home">
       <HomeSlider />
       <HomeOrderSection />
-      <LatestNews/>
+      <LatestNews />
       {/* kody grelu eq aystex, baci headeric ev footeric, qani vor nranq gtnvum en Layout-i mej!!!! */}
     </div>
   );
