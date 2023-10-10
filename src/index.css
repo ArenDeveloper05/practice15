@@ -14,7 +14,15 @@ body{
 }
 :root {
   --global-max-width: 1300px;
+/* <<<<<<< HEAD */
+  --template-font: 'PT Sans Narrow', sans-serif;
+  --template-yellow: #fd9d3e;
+  --white: #fff;
+  --black: #000;
+/* ======= */
   --bs-gutter-y: 0;
   --bs-gutter-x: 24px;
   --slider-min-height: 700px;
+
+/* >>>>>>> 0703f4f41286e2a5ff0065b1904ec0d28b670c0a */
 }
