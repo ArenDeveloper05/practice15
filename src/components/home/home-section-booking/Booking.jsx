@@ -1,3 +1,4 @@
+import "./Booking.scss";
 import React, { useState } from "react";
 import Container from "../../common/container/Container";
 import call from "../../../assets/home-booking/call.png";
@@ -42,7 +43,7 @@ export const Booking = () => {
                   cursor: "pointer",
                 }}
                 onClick={() => {
-                  setDown(!down);
+                  setDown((prev) => !prev);
                 }}
               >
                 <p>{!selectedItem ? "How many persons?" : `${selectedItem}`}</p>
@@ -59,7 +60,9 @@ export const Booking = () => {
                 className="booking-right-side-inputs-hidden"
                 style={{
                   display: down ? "block" : "none",
-                  animation: down? "show 0.5s ease-in-out" : "hide 0.5s ease-in-out ",
+                  animation: down
+                    ? "show 0.5s ease-in-out"
+                    : "hide 0.5s ease-in-out ",
                 }}
               >
                 {persons.map(({ id, title }) => {

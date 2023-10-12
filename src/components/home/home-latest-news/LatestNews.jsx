@@ -1,4 +1,4 @@
-import React from "react";
+import "./LatestNews.scss";
 import Container from "../../common/container/Container";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";

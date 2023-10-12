@@ -2,7 +2,7 @@ import { CONFIG } from "../../../config";
 import Container from "../../common/container/Container";
 import "./HomeOrderSection.scss";
 import OrderItem from "./order-item/OrderItem";
-import top from "../../../Assets/Images/home-slider-images/order-top.png";
+import top from "../../../assets/Images/home-slider-images/order-top.png";
 
 const HomeOrderSection = () => {
   const { home_order_info } = CONFIG;
