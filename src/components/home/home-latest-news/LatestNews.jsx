@@ -6,7 +6,6 @@ import { Link, useNavigate } from "react-router-dom";
 export const LatestNews = () => {
   const newsdata = useSelector((state) => state.latestNews.latestNewsData);
   const navigate = useNavigate();
-  //   console.log(newsdata);
   return (
     <section className="news">
       <Container>

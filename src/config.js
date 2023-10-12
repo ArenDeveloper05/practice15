@@ -1,4 +1,3 @@
-
 import { BsTelephone } from "react-icons/bs";
 import { SlHandbag } from "react-icons/sl";
 import pepperoni from "./assets/header-images/menu-list-images/pepperoni.png";
@@ -33,14 +32,14 @@ import order_pizza from "./assets/Images/home-order-sec-icons/order-3.svg";
 
 export const CONFIG = {
   specialMenuConfig: [
-        { id: 1, title: "ALL", type: "All", active: 1},
-        { id: 2, title: "DRINKS", type: "drink", active: 1},
-        { id: 3, title: "SALADS", type: "salad", active: 1},
-        { id: 4, title: "PASTA", type: "pasta", active: 1},
-        { id: 5, title: "BURGERS", active: 1},
-        { id: 6, title: "DESSERTS", type: "dessert", active: 1},
-        { id: 7, title: "PIZZAS", type: "pizza", active: 1},
-    ],
+    { id: 1, title: "ALL", type: "All" },
+    { id: 2, title: "DRINKS", type: "drink" },
+    { id: 3, title: "SALADS", type: "salad" },
+    { id: 4, title: "PASTA", type: "pasta" },
+    { id: 5, title: "BURGERS" },
+    { id: 6, title: "DESSERTS", type: "dessert" },
+    { id: 7, title: "PIZZAS", type: "pizza" },
+  ],
   headerConfig: [
     {
       id: 1,
