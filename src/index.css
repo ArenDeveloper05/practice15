@@ -19,6 +19,7 @@ body{
 
 :root {
   --global-max-width: 1300px;
+  --global-orange-color: #fd9d3e;
   --template-font: 'PT Sans Narrow', sans-serif;
   --template-yellow: #fd9d3e;
   --white: #fff;
