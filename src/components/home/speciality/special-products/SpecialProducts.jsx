@@ -1,4 +1,4 @@
-import React from "react";
+import "./SpecialProducts.scss";
 import Container from "../../../common/container/Container";
 import "./../../Home.scss";
 import { useSelector } from "react-redux";

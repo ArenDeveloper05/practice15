@@ -1,10 +1,8 @@
 .booking {
-  border: solid;
   padding: 100px 0 100px 0;
   background-color: white;
   &-container {
     display: flex;
-    // gap: 100px;
     justify-content: space-between;
     width: 100%;
     --bs-gutter-x: 24px;
