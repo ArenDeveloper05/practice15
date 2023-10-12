@@ -1,3 +1,4 @@
+
 import { BsTelephone } from "react-icons/bs";
 import { SlHandbag } from "react-icons/sl";
 import pepperoni from "./assets/header-images/menu-list-images/pepperoni.png";
@@ -6,10 +7,6 @@ import specialty from "./assets/header-images/menu-list-images/specialty.png";
 import hamCheese from "./assets/header-images/menu-list-images/hamCheese.png";
 import onion from "./assets/header-images/menu-list-images/onion.png";
 import margherita from "./assets/header-images/menu-list-images/margherita.png";
-// const CONFIG = {
-
-// }
-// export default CONFIG;
 
 import pizza_1 from "./assets/Images/home-slider-images/banner-bg-1.png";
 import pizza_3 from "./assets/Images/home-slider-images/pizza-banner-2.png";
@@ -35,6 +32,15 @@ import order_truck from "./assets/Images/home-order-sec-icons/order-2.svg";
 import order_pizza from "./assets/Images/home-order-sec-icons/order-3.svg";
 
 export const CONFIG = {
+  specialMenuConfig: [
+        { id: 1, title: "ALL", type: "All", active: 1},
+        { id: 2, title: "DRINKS", type: "drink", active: 1},
+        { id: 3, title: "SALADS", type: "salad", active: 1},
+        { id: 4, title: "PASTA", type: "pasta", active: 1},
+        { id: 5, title: "BURGERS", active: 1},
+        { id: 6, title: "DESSERTS", type: "dessert", active: 1},
+        { id: 7, title: "PIZZAS", type: "pizza", active: 1},
+    ],
   headerConfig: [
     {
       id: 1,
@@ -224,4 +230,3 @@ export const CONFIG = {
     },
   ],
 };
-// >>>>>>> 0703f4f41286e2a5ff0065b1904ec0d28b670c0a
