@@ -15,7 +15,7 @@ const initialState = {
           name: "Pepperoni",
           price: "$12.99",
           last_price: "$30.50",
-          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry."
+          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravid: 1, mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry."
         },
         {
           id: 2,
@@ -23,7 +23,7 @@ const initialState = {
           name: "Vegetarian",
           price: "$12.99",
           last_price: "$30.50",
-          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry."
+          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravid: 1, mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry."
         },
         {
           id: 3,
@@ -31,7 +31,7 @@ const initialState = {
           name: "Specialty",
           price: "$12.99",
           last_price: "$30.50",
-          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry."
+          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravid: 1, mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry."
         },
         {
           id: 4,
@@ -39,7 +39,7 @@ const initialState = {
           name: "Ham & Cheese",
           price: "$12.99",
           last_price: "$30.50",
-          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry."
+          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravid: 1, mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry."
         },
         {
           id: 5,
@@ -47,7 +47,7 @@ const initialState = {
           name: "Onion",
           price: "$12.99",
           last_price: "$30.50",
-          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry."
+          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravid: 1, mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry."
         },
         {
           id: 6,
