@@ -1,7 +1,9 @@
+import { useNavigate, useParams } from 'react-router-dom'
 import { CONFIG } from '../../../config'
 import Container from '../../common/container/Container'
 
 const Menu = () => {
+    const navigate = useNavigate();
   return (
     <div className="menu-dropdown">
         <Container>
@@ -9,7 +11,12 @@ const Menu = () => {
                 {
                     CONFIG.menuConfig.pizzas.map(({id, img, name, price }) => {
                         return (
-                            <div key={id}>
+                            <div 
+                                key={id}
+                                onClick={() => {
+                                    navigate(`/menu/${id}`)
+                                }}
+                            >
                                 <img src={img} alt="" />
                                 <div className='about-pizza'>
                                     <p>{name}</p>

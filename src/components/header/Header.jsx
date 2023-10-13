@@ -39,16 +39,16 @@ const Header = () => {
             {CONFIG.headerConfig.map(({ id, title, icon }) => {
               return (
                 <li
-                  className={
-                    id === 2
-                      ? "menu-item"
-                      : id === 3
-                      ? "blog-item"
-                      : id === 5
-                      ? "page-item"
-                      : null
-                  }
-                  key={id}
+                key={id}
+                className={
+                  id === 2
+                    ? "menu-item"
+                    : id === 3
+                    ? "blog-item"
+                    : id === 5
+                    ? "page-item"
+                    : null
+                }
                 >
                   {icon}
                   {icon}
