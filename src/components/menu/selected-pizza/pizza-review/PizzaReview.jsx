@@ -1,37 +1,28 @@
-import {   useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 import Container from "../../../common/container/Container";
 
-const PizzaReview = ({id}) => {
-    const data = useSelector((state) => state.pizzaReview.pizzas);
-    // console.log(id);s
-    const selectedObject = data.filter(item => item.id === id);
-    // console.log(selectedObject);
+const PizzaReview = ({ id }) => {
+  const data = useSelector((state) => state.pizzaReview.pizzas);
+  const selectedObject = data.find((item) => item.id === Number(id));
   return (
     <section>
       <Container>
-            {
-                data.map(({id, img, name, last_price, price, description}) => {
-                    return (
-                        <div key={id}>
-                            <div className="pizza">
-                                <img src={img}  />
-                            </div>
-                            <div className="pizza-order-list">
-                                <h1>{name}</h1>
-                                <p>
-                                    <span>{last_price}</span>
-                                    <span>{price}</span>
-                                </p>
-                                <p>{description}</p>
-                            </div>
-                        </div>
-                    )
-                })
-            }
+        <div key={id}>
+          <div className="pizza">
+            <img src={selectedObject.img} />
+          </div>
+          <div className="pizza-order-list">
+            <h1>{selectedObject.name}</h1>
+            <p>
+              <span>{selectedObject.last_price}</span>
+              <span>{selectedObject.price}</span>
+            </p>
+            <p>{selectedObject.description}</p>
+          </div>
+        </div>
       </Container>
     </section>
-  )
-}
+  );
+};
 
-export default PizzaReview
+export default PizzaReview;

@@ -2,19 +2,19 @@ import bannerBackground from "../../../assets/banner/banner-background.jpg";
 import PageBanner from "../../common/page-banner/PageBanner";
 import PizzaReview from "./pizza-review/PizzaReview";
 
-const SelectedPizza = ({id}) => {
+const SelectedPizza = ({ id }) => {
   return (
     <div>
-      <PageBanner 
-        background={bannerBackground} 
-        title={'Chicken Breast'}
-        firstDirectionPoint={'Home'}
-        secondDirectionPoint={'Order Online'}
-        thirdDirectionPoint={'Chicken Bresast'}
+      <PageBanner
+        background={bannerBackground}
+        title={"Chicken Breast"}
+        firstDirectionPoint={"Home"}
+        secondDirectionPoint={"Order Online"}
+        thirdDirectionPoint={"Chicken Bresast"}
       />
-      <PizzaReview id={id}/>
+      <PizzaReview id={id} />
     </div>
-  )
-}
+  );
+};
 
-export default SelectedPizza
+export default SelectedPizza;
