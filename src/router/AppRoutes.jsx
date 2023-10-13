@@ -7,7 +7,7 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path={ROUTER.HOME_PAGE_ROUTE} element={<HomePage />} />
-      <Route path={`${ROUTER.MENU_PAGE_ROUTE}/:id`} element={<SelectedPizzaPage />}/>
+      <Route path={ROUTER.SINGLE_MENU_PAGE_ROUTE} element={<SelectedPizzaPage />} />
     </Routes>
   );
 };

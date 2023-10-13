@@ -1,9 +1,8 @@
-import { useParams } from "react-router-dom";
 import bannerBackground from "../../../assets/banner/banner-background.jpg";
 import PageBanner from "../../common/page-banner/PageBanner";
+import PizzaReview from "./pizza-review/PizzaReview";
 
-const SelectedPizza = () => {
-  const {id} = useParams();
+const SelectedPizza = ({id}) => {
   return (
     <div>
       <PageBanner 
@@ -13,6 +12,7 @@ const SelectedPizza = () => {
         secondDirectionPoint={'Order Online'}
         thirdDirectionPoint={'Chicken Bresast'}
       />
+      <PizzaReview id={id}/>
     </div>
   )
 }

@@ -1,9 +1,12 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import { CONFIG } from '../../../config'
 import Container from '../../common/container/Container'
+import { useDispatch } from 'react-redux';
+import { filter } from "../../../redux/slices/pizzaReviewSlice";
 
 const Menu = () => {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
   return (
     <div className="menu-dropdown">
         <Container>
@@ -15,6 +18,7 @@ const Menu = () => {
                                 key={id}
                                 onClick={() => {
                                     navigate(`/menu/${id}`)
+                                    // dispatch(filter(id))
                                 }}
                             >
                                 <img src={img} alt="" />
