@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import menu1 from "../../assets/menu-imges/menu-1.png";
-import menu2 from "../../assets/menu-imges/menu-2.png";
-import menu3 from "../../assets/menu-imges/menu-3.png";
-import menu4 from "../../assets/menu-imges/menu-4.png";
-import menu5 from "../../assets/menu-imges/menu-5.png";
-import menu6 from "../../assets/menu-imges/menu-6.png";
-import menu7 from "../../assets/menu-imges/menu-7.png";
-import menu8 from "../../assets/menu-imges/menu-8.png";
+import menu1 from "../../assets/menu-images/menu-1.png";
+import menu2 from "../../assets/menu-images/menu-2.png";
+import menu3 from "../../assets/menu-images/menu-3.png";
+import menu4 from "../../assets/menu-images/menu-4.png";
+import menu5 from "../../assets/menu-images/menu-5.png";
+import menu6 from "../../assets/menu-images/menu-6.png";
+import menu7 from "../../assets/menu-images/menu-7.png";
+import menu8 from "../../assets/menu-images/menu-8.png";
 
 const initialState = {
     specialMenu: [
