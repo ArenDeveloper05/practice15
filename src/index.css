@@ -30,4 +30,5 @@ body {
   --bs-gutter-y: 0;
   --bs-gutter-x: 24px;
   --slider-min-height: 700px;
+  --blog-thin-border-color: #dddddd;
 }

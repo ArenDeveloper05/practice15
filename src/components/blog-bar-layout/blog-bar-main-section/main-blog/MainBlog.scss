@@ -5,11 +5,10 @@
     align-items: center;
     padding: 24px;
     a {
-      text-decoration: none;
       font-family: inherit;
       width: 40px;
       height: 40px;
-      border: 1px solid #dddddd;
+      border: 1px solid var(--blog-thin-border-color);
       text-align: center;
       font-size: 16px;
       color: #999999;
@@ -68,9 +67,6 @@
         }
       }
       &-body {
-        a {
-          text-decoration: none;
-        }
         h1 {
           font-size: 30px;
           color: #1d1d1d;
