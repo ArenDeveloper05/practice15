@@ -92,13 +92,13 @@
         height: 80px;
         overflow: hidden;
         cursor: pointer;
-        > img {
+        img {
           width: 100%;
           height: 100%;
           object-fit: cover;
           transition: all 0.3s ease-out;
         }
-        > img:hover {
+        img:hover {
           transform: scale3d(1.1, 1.1, 1.1);
         }
       }
