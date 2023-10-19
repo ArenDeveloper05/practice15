@@ -6,8 +6,8 @@ import specialty from "./assets/header-images/menu-list-images/specialty.png";
 import hamCheese from "./assets/header-images/menu-list-images/hamCheese.png";
 import onion from "./assets/header-images/menu-list-images/onion.png";
 import margherita from "./assets/header-images/menu-list-images/margherita.png";
+import logo from "./assets/header-images/header-logo.png";
 import rum_with_soda from "./assets/header-images/menu-list-images/rum-with-soda.png";
-
 import pizza_1 from "./assets/Images/home-slider-images/banner-bg-1.png";
 import pizza_3 from "./assets/Images/home-slider-images/pizza-banner-2.png";
 import pizza_2 from "./assets/Images/home-slider-images/pizza-banner-1.png";
@@ -305,6 +305,103 @@ export const CONFIG = {
       img: order_pizza,
     },
   ],
+  footerConfig:{
+    footer_header:[
+      {
+        id: 1,
+        image: logo,
+        title: null
+      },
+      {
+        id: 2,
+        image: null,
+        title: "OPENING HOURS"
+      },
+      {
+        id: 3,
+        image: null,
+        title: "USEFUL LINKS"
+      },
+    ],
+    first_footer_list:[
+      {
+        id: 1,
+        title: "20 Carrochan Rd, Balloch, Alexandria G83 8EG, UK 69QJ+2F Alexandria, United Kingdom",
+      },
+      {
+        id: 2,
+        title: "PHONE - +91 123 456 789 0, +91 123 456 789 0",
+      },
+      {
+        id: 3,
+        title: "EMAIL - info@gmail.com",
+      }
+    ],
+    second_footer_list:{
+      first_column: [
+        {
+          id: 1,
+          title:  "Mon - Tues :"
+        },
+        {
+          id: 2,
+          title:  "Wednes - Thurs :"
+        },
+        {
+          id: 3,
+          title:  "Launch :"
+        },
+        {
+          id: 4,
+          title:  "Sunday :"
+        }
+      ],
+      second_column: [
+        {
+          id: 1,
+          title:  "6.00 am - 10.00 pm"
+        },
+        {
+          id: 2,
+          title:  "6.00 am - 10.00 pm"
+        },
+        {
+          id: 3,
+          title:  "Everyday"
+        },
+        {
+          id: 4,
+          title:  "Closed"
+        }
+      ]
+    },
+    third_footer_list:[
+      {
+        id: 1,
+        title: "Privacy Policy",
+      },
+      {
+        id: 2,
+        title: "Order Tracking",
+      },
+      {
+        id: 3,
+        title: "Warranty and Services",
+      },
+      {
+        id: 4,
+        title: "About",
+      },
+      {
+        id: 5,
+        title: "Contact Us",
+      },
+      {
+        id: 6,
+        title: "Wishlist",
+      }
+    ]
+  },
   blog_side_bar_categories: ["decorate", "even", "gallery", "recipe", "restaurant food"],
   blog_side_bar_tags: ["cooking", "food", "pellentesfetque", "restaurant Food", "nulla pellentesque", "cooking"],
   related_products : [
@@ -343,5 +440,4 @@ export const CONFIG = {
     { id: 3, tag: "Fashion" },
     { id: 4, tag: "Consulting" },
   ],
-
 };
