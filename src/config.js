@@ -6,6 +6,7 @@ import specialty from "./assets/header-images/menu-list-images/specialty.png";
 import hamCheese from "./assets/header-images/menu-list-images/hamCheese.png";
 import onion from "./assets/header-images/menu-list-images/onion.png";
 import margherita from "./assets/header-images/menu-list-images/margherita.png";
+import rum_with_soda from "./assets/header-images/menu-list-images/rum-with-soda.png";
 
 import pizza_1 from "./assets/Images/home-slider-images/banner-bg-1.png";
 import pizza_3 from "./assets/Images/home-slider-images/pizza-banner-2.png";
@@ -30,6 +31,8 @@ import order_plate from "./assets/Images/home-order-sec-icons/order-1.svg";
 import order_truck from "./assets/Images/home-order-sec-icons/order-2.svg";
 import order_pizza from "./assets/Images/home-order-sec-icons/order-3.svg";
 
+
+import {FaHeart, FaEnvelope, FaSignal, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram} from "react-icons/fa6";
 export const CONFIG = {
   specialMenuConfig: [
     { id: 1, title: "ALL", type: "All" },
@@ -93,31 +96,31 @@ export const CONFIG = {
       {
         id: 2,
         img: vegetarian,
-        name: "Pepperoni",
+        name: "Vegetarian",
         price: "$12.99",
       },
       {
         id: 3,
         img: specialty,
-        name: "Pepperoni",
+        name: "Specialty",
         price: "$12.99",
       },
       {
         id: 4,
         img: hamCheese,
-        name: "Pepperoni",
+        name: "Ham & Cheese",
         price: "$12.99",
       },
       {
         id: 5,
         img: onion,
-        name: "Pepperoni",
+        name: "Onion",
         price: "$12.99",
       },
       {
         id: 6,
         img: margherita,
-        name: "Pepperoni",
+        name: "Margheritapizza",
         price: "$12.99",
       },
     ],
@@ -182,6 +185,80 @@ export const CONFIG = {
       title: "Contact",
     },
   ],
+  singlePizzaOrderList: {
+    crusts: [
+      {
+        id: 1,
+        crust: "Classic Hand Tossed",
+      },
+      {
+        id: 2,
+        crust: "Wheat Thin Crust",
+      },
+      {
+        id: 3,
+        crust: "Classic Hand Tossed",
+      }
+    ],
+    crusts_size: [
+      {
+        id: 1,
+        crust: "Medium",
+      },
+      {
+        id: 2,
+        crust: "Large",
+      },
+      {
+        id: 3,
+        crust: "Regular",
+      }
+    ],
+    compare: [
+      {
+        id: 1,
+        icon: <FaHeart />,
+        name: "WishList"
+      },
+      {
+        id: 2,
+        icon: <FaSignal />,
+        name: "Compare"
+      },
+      {
+        id: 3,
+        icon: <FaEnvelope />,
+        name: "Email to Friends"
+      }
+    ],
+    share: [
+      {
+        id: 1,
+        icon: null,
+        name: "Share This :"
+      },
+      {
+        id: 2,
+        icon: <FaFacebookF />,
+        name: null
+      },
+      {
+        id: 3,
+        icon: <FaTwitter />,
+        name: null
+      },
+      {
+        id: 4,
+        icon: <FaLinkedinIn />,
+        name: null
+      },
+      {
+        id: 5,
+        icon: <FaInstagram />,
+        name: null
+      }
+    ]
+  },
   home_slider_data: [
     {
       id: 1,
@@ -228,10 +305,41 @@ export const CONFIG = {
       img: order_pizza,
     },
   ],
+  related_products : [
+    {
+      id: 1,
+      img: margherita,
+      name: "MARGHERITA PIZZA",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      price: "$20.50"
+    },
+    {
+      id: 2,
+      img: rum_with_soda,
+      name: "RUM WITH SODA",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      price: "$20.50"
+    },
+    {
+      id: 3,
+      img: vegetarian,
+      name: "VEGETARIAN",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      price: "$20.50"
+    },
+    {
+      id: 4,
+      img: pepperoni,
+      name: "PEPPERONI PIZZA",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      price: "$20.50"
+    },
+  ],
   blogDetailTags: [
     { id: 1, tag: "Planing" },
     { id: 2, tag: "Business" },
     { id: 3, tag: "Fashion" },
     { id: 4, tag: "Consulting" },
   ],
+
 };

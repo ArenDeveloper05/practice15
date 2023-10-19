@@ -120,7 +120,7 @@ header {
     > .container > .row {
         .logo {
             > img {
-                transform: scale3d(.8, .8, 1);
+                transform: scale3d(.8, .8, 1) translateX(-25px);
                 @include transition;
             }
         }
@@ -174,7 +174,7 @@ header {
             }
         }
         > .menu-list {
-            align-self: center;
+            padding-top: 50px;
             > ul {
                 > li {
                     @include list-item;

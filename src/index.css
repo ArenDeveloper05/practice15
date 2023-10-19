@@ -15,8 +15,11 @@ body{
   font-size: 16px;
   font-weight: 400;
   color: #999;
+  
 }
-
+main {
+  position: relative;
+}
 :root {
   --global-max-width: 1300px;
   --global-orange-color: #fd9d3e;
