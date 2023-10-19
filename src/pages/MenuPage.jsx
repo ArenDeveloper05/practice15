@@ -5,9 +5,9 @@ import Menu from "../components/menu/Menu";
 const MenuPage = () => {
   return (
     <Layout>
-        <Menu/>
+      <Menu />
     </Layout>
-  )
+  );
 };
 
 export default MenuPage;

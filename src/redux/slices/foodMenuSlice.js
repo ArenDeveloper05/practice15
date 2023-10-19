@@ -176,7 +176,9 @@ const foodMenuSlice = createSlice({
       if (currentCategory === "All") {
         state.filteredMenu = state.menu;
       } else {
-        state.filteredMenu = state.menu.filter((item) => item[currentCategory] === true);
+        state.filteredMenu = state.menu.filter(
+          (item) => item[currentCategory] === true
+        );
       }
     },
   },

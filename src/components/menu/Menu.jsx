@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import PageBanner from "../common/page-banner/PageBanner";
 import banner from "../../assets/banner/menu-banner-1.png";
 import { Booking } from "../home/home-section-booking/Booking";
@@ -10,20 +9,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { BestChef } from "../home/home-best-chef-slider/BestChef";
 import { setFilteredMenu } from "../../redux/slices/foodMenuSlice";
 
-
-
 const Menu = () => {
   const [state, setState] = useState(CONFIG.specialMenuConfig[0].id);
-  const menu = useSelector((state) => {
-    if (state===1) {
-      return state.foodMenu.menu;
-    } else {
-      return state.foodMenu.filteredMenu;
-    }
-  });
+  const globalMenu = useSelector((state) => state.foodMenu);
   const dispatch = useDispatch();
-
-
 
   return (
     <>
@@ -39,15 +28,25 @@ const Menu = () => {
             <div className="foodMenu-nav-buttons">
               {CONFIG.specialMenuConfig.map(({ id, title, type }) => {
                 return (
-                  <div key={id}
+                  <div
+                    key={id}
                     onClick={() => {
-                        setState((prev) => (prev === id ? null : id));
-                        dispatch(setFilteredMenu(type))
+                      if (state !== id) {
+                        setState(id);
+                        dispatch(setFilteredMenu(type));
+                      }
                     }}
-                    style={{
-                      backgroundColor: state === id ? "#fd9d3e" : "transparent",
-                      color: state === id ? "white" : "black",
-                    }}
+                    style={
+                      state === id
+                        ? {
+                            backgroundColor: "#fd9d3e",
+                            color: "white",
+                          }
+                        : {
+                            backgroundColor: "transparent",
+                            color: "black",
+                          }
+                    }
                   >
                     {title}
                   </div>
@@ -56,7 +55,7 @@ const Menu = () => {
             </div>
           </div>
           <div className="foodMenu-list">
-            {menu.map(
+            {(state === 1 ? globalMenu.menu : globalMenu.filteredMenu).map(
               ({
                 id,
                 name,

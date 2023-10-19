@@ -15,13 +15,13 @@
   &-items {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 100px;
     margin-top: 20px;
     cursor: pointer;
 
     img {
-      height: 275px;
-      width: 275px;
+      height: 350px;
+      width: 350px;
       border-radius: 50%;
       cursor: pointer;
       transition: transform 0.7s ease;

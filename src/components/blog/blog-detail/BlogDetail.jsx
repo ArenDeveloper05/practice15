@@ -3,8 +3,9 @@ import "./BlogDetail.scss";
 import blogBanner from "../../../assets/blog-images/blog-detail/blog-5.jpg";
 import Container from "../../common/container/Container";
 import bg from "../../../assets/blog-images/blog-detail/blog-2.jpg";
-import tag from '../../../assets/blog-images/blog-detail/tag.jpg'
+import tag from "../../../assets/blog-images/blog-detail/tag.jpg";
 import { CONFIG } from "../../../config";
+import BlogDetailComments from "./blog-detail-comments/BlogDetailComments";
 const BlogDetail = () => {
   return (
     <>
@@ -78,20 +79,24 @@ const BlogDetail = () => {
             </span>
             <div className="blog-detail-info-tags">
               <p>Tags:</p>
-              {CONFIG.blogDetailTags.map(({id, tag})=>{
-                return (
-                  <div key={id}>{tag}</div>
-                )
+              {CONFIG.blogDetailTags.map(({ id, tag }) => {
+                return <div key={id}>{tag}</div>;
               })}
             </div>
             <div className="blog-detail-info-author">
               <img src={tag} alt="" />
               <div>
                 <p>JOHN DOE</p>
-                <span>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth,</span>
+                <span>
+                  But I must explain to you how all this mistaken idea of
+                  denouncing pleasure and praising pain was born and I will give
+                  you a complete account of the system, and expound the actual
+                  teachings of the great explorer of the truth,
+                </span>
               </div>
             </div>
           </div>
+          <BlogDetailComments />
         </Container>
       </section>
     </>
