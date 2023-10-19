@@ -228,4 +228,10 @@ export const CONFIG = {
       img: order_pizza,
     },
   ],
+  blogDetailTags: [
+    { id: 1, tag: "Planing" },
+    { id: 2, tag: "Business" },
+    { id: 3, tag: "Fashion" },
+    { id: 4, tag: "Consulting" },
+  ],
 };
