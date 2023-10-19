@@ -305,6 +305,8 @@ export const CONFIG = {
       img: order_pizza,
     },
   ],
+  blog_side_bar_categories: ["decorate", "even", "gallery", "recipe", "restaurant food"],
+  blog_side_bar_tags: ["cooking", "food", "pellentesfetque", "restaurant Food", "nulla pellentesque", "cooking"],
   related_products : [
     {
       id: 1,
