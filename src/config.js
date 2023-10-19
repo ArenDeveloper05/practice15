@@ -39,7 +39,7 @@ export const CONFIG = {
     { id: 2, title: "DRINKS", type: "drink" },
     { id: 3, title: "SALADS", type: "salad" },
     { id: 4, title: "PASTA", type: "pasta" },
-    { id: 5, title: "BURGERS" },
+    { id: 5, title: "BURGERS", type: "burger"},
     { id: 6, title: "DESSERTS", type: "dessert" },
     { id: 7, title: "PIZZAS", type: "pizza" },
   ],
@@ -305,7 +305,6 @@ export const CONFIG = {
       img: order_pizza,
     },
   ],
-
   related_products : [
     {
       id: 1,
