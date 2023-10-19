@@ -18,7 +18,6 @@ const Menu = () => {
                                 key={id}
                                 onClick={() => {
                                     navigate(`/menu/${id}`)
-                                    // dispatch(filter(id))
                                 }}
                             >
                                 <img src={img} alt="" />
