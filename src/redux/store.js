@@ -5,6 +5,9 @@ import ourSpecialityReducer from "./slices/ourSpecialitySlice";
 import pizzaReviewReducer from "./slices/pizzaReviewSlice";
 import blogSidesPostsSlice from "./slices/blogSidesPostsSlice.js";
 import blogSidesRecentPostsSlice from "./slices/blogSidesRecentPostsSlice";
+import bestChefReducer from "../redux/slices/bestChefSlice";
+import customerReviewsReducer from "../redux/slices/customerReviewsSlice";
+import foodMenuReducer from "./slices/foodMenuSlice";
 
 const store = configureStore({
     reducer: {
@@ -13,7 +16,10 @@ const store = configureStore({
         specialMenu: specialMenuReducer,
         pizzaReview: pizzaReviewReducer,
         blogSidesPosts: blogSidesPostsSlice,
-        blogSidesRecentPosts: blogSidesRecentPostsSlice
+        blogSidesRecentPosts: blogSidesRecentPostsSlice,
+        bestChef: bestChefReducer,
+        reviews: customerReviewsReducer,
+        foodMenu: foodMenuReducer,
     }
 })
 
