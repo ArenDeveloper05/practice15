@@ -5,9 +5,11 @@ import Blog from "./blog/Blog";
 import Pages from "./pages/Pages";
 import { CONFIG } from "../../config";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
   useEffect(() => {
     // Function to handle the scroll event
     const handleScroll = () => {
@@ -40,6 +42,9 @@ const Header = () => {
               return (
                 <li
                 key={id}
+                onClick={() => {
+                  if(id === 1) navigate("/");
+                }}
                 className={
                   id === 2
                     ? "menu-item"
