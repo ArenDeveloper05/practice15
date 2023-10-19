@@ -305,6 +305,7 @@ export const CONFIG = {
       img: order_pizza,
     },
   ],
+
   related_products : [
     {
       id: 1,
@@ -334,5 +335,12 @@ export const CONFIG = {
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       price: "$20.50"
     },
-  ]
+  ],
+  blogDetailTags: [
+    { id: 1, tag: "Planing" },
+    { id: 2, tag: "Business" },
+    { id: 3, tag: "Fashion" },
+    { id: 4, tag: "Consulting" },
+  ],
+
 };
