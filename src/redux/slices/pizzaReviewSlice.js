@@ -134,6 +134,22 @@ const initialState = {
         date: today
       },
     ],
+    pizza_in_basket: [
+      {
+        id: 1,
+        img: margherita,
+        name: 'Margherita Pizza',
+        price: '$14.99',
+        qty: 1
+      },
+      {
+        id: 2,
+        img: specialty,
+        name: 'Greek Pizza',
+        price: '$14.99',
+        qty: 1
+      }
+    ],
     filteredPizza: []
 }
 

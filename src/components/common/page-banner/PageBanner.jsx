@@ -12,8 +12,7 @@ const PageBanner = ({background, title, firstDirectionPoint, secondDirectionPoin
             <span>{firstDirectionPoint}</span>
             /
             <span>{secondDirectionPoint}</span>
-            /
-            <span>{thirdDirectionPoint && thirdDirectionPoint}</span>
+            <span>{`${thirdDirectionPoint ? '/' : ''}`}</span>
           </p>
         </div>
       </Container>
