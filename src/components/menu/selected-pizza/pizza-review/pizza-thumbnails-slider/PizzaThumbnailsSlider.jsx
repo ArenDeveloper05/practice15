@@ -9,25 +9,31 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Navigation } from 'swiper/modules';
 import { useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 
-const PizzaThumbnailsSlider = () => {
-    const thumbnailsData = useSelector((state) => state.pizzaReview.pizzaThumbnails);
-    const [active, setActive] = useState(1);
+const PizzaThumbnailsSlider = ({currentObject, setCurrentObject}) => {
+    console.log(currentObject);
+    const {id} = useParams();
+    const data = useSelector((state) => state.pizzaReview.pizzas);
+    const [active, setActive] = useState(+id);
+    ///
+    // const [clicked, setClicked] = useState(false);
+    ///
     const handleImageClick = (id) => {
         setActive(id);
     }
+
+/////////
   return (
     <div className="image-slider">
      <Swiper
         modules={[Navigation]}
         slidesPerView={1}
         navigation
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
      >
         {
-            thumbnailsData.map(({id, img}) => {
+            data.map(({id, img}) => {
                return (
                 <SwiperSlide 
                 key={id} >
@@ -35,6 +41,11 @@ const PizzaThumbnailsSlider = () => {
                     src={img} 
                     onClick={() => {
                         handleImageClick(id)
+                        setCurrentObject({
+                            ...currentObject,
+                            id: id,
+                            img: img
+                        });
                     }}
                     style={{opacity: active === id ? "1" : "0.5"}}
                     /> 
@@ -42,6 +53,12 @@ const PizzaThumbnailsSlider = () => {
                )
             })
         }
+        {/* <div 
+        className={`swiper-button-next ${clicked ? 'swiper-button-disabled' : ''}`}
+        onClick={() => {
+            setClicked(true);
+        }}
+        ></div> */}
      </Swiper>
     </div>
   );
