@@ -1,31 +1,22 @@
 import { useSelector } from "react-redux";
 import Container from "../../../common/container/Container";
-import "./PizzaReview.scss";
 import PizzaReviewForm from "./pizza-order-form/PizzaOrderForm";
 import WishList from "./wishlist/WishList";
 import PizzaThumbnailsSlider from "./pizza-thumbnails-slider/PizzaThumbnailsSlider";
 import { useRef, useState } from "react";
 import DescriptionReview from "./description-review/DescriptionReview";
 import RelatedProducts from "./related-products/RelatedProducts";
+import "./PizzaReview.scss";
 
-// SWIPER
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import PizzaReviewModal from "./pizza-review-modal/PizzaReviewModal";
 const PizzaReview = ({ id }) => {
 
-  //////
+//////
 const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 });
 const [showPreview, setShowPreview] = useState(false);
 const [activeModal, setActiveModal] = useState(false);
-
 const imageContainerRef = useRef(null);
-
-
+//////
 const handleMouseMove = (e) => {
   const { top, left, width, height } = imageContainerRef.current.getBoundingClientRect();
   const x = (e.clientX - left) / width;
@@ -37,7 +28,7 @@ const handleMouseMove = (e) => {
 const handleMouseLeave = () => {
   setShowPreview(false);
 };
-
+///////
 const hoverDivStyle = {
   left: hoverPosition.x - 90,
   top: hoverPosition.y - 90,
@@ -46,19 +37,19 @@ const hoverDivStyle = {
 };
 
  //////
-  const thumbnailsData = useSelector((state) => state.pizzaReview.pizzaThumbnails);
   const data = useSelector((state) => state.pizzaReview.pizzas);
   const selectedObject = data.find((item) => item.id === Number(id));
+  const [currentObject, setCurrentObject] = useState(selectedObject);
   ////
   const magnifiedDivStyle = {
-    backgroundImage: `url(${selectedObject.img})`,
+    backgroundImage: `url(${currentObject.img})`,
     backgroundSize: '130% 130%',
     backgroundPosition: `${(hoverPosition.x * 100) - 30}% ${(hoverPosition.y * 100) - 30}%`,
     opacity: showPreview ? 1 : 0,
-    display: showPreview ? "block" : "none"
+    display: showPreview ? "block" : "none",
+    visibility: showPreview ? "visible" : "hidden"
   };
   
-
   return (
     <section>
       <Container>
@@ -74,42 +65,26 @@ const hoverDivStyle = {
             }}
             >
               <div className="hover-square" style={hoverDivStyle}></div>
-              <Swiper
-                modules={[Navigation]}
-                slidesPerView={1}
-                navigation
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
-              >
-                {
-                    thumbnailsData.map(({id, img}) => {
-                      return (
-                        <SwiperSlide key={id} >
-                          <img src={img}/> 
-                        </SwiperSlide> 
-                      )
-                    })
-                }
-              </Swiper>
+              <div className="main-pizza" style={{backgroundImage: `url(${currentObject.img})`,transition: 'all 600ms ease 0s'}}></div>
             </div>
-            <PizzaThumbnailsSlider />
+            <PizzaThumbnailsSlider currentObject={currentObject} setCurrentObject={setCurrentObject}/>
           </div>
           <div className="pizza-order-list">
-            <h1>{selectedObject.name}</h1>
+            <h1>{currentObject.name}</h1>
             <p>
-              <span className="last-price">{selectedObject.last_price}</span>
-              <span>{selectedObject.price}</span>
+              <span className="last-price">{currentObject.last_price}</span>
+              <span>{currentObject.price}</span>
             </p>
-            <p>{selectedObject.description}</p>
+            <p>{currentObject.description}</p>
             <PizzaReviewForm />
             <WishList />
           </div>
           <div className="preview-div" style={magnifiedDivStyle}></div>
         </section>
-        <DescriptionReview />
+        <DescriptionReview/>
         <RelatedProducts />
       </Container>
-      <PizzaReviewModal activeModal={activeModal} setActiveModal={setActiveModal}/>
+      <PizzaReviewModal activeModal={activeModal} setActiveModal={setActiveModal} id={id} currentObject={currentObject}/>
     </section>
   );
 };
