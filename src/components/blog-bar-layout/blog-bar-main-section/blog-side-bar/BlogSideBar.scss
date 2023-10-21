@@ -50,6 +50,8 @@
       text-transform: capitalize;
       cursor: pointer;
       transition: all 0.3s ease;
+      margin: 0;
+      color: #999999;
     }
     li:hover {
       color: var(--global-orange-color);
