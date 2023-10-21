@@ -5,7 +5,8 @@ import Blog from "./blog/Blog";
 import Pages from "./pages/Pages";
 import { CONFIG } from "../../config";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { ROUTER } from "../../router/router";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,36 +30,51 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const routes = [
+    ROUTER.HOME_PAGE_ROUTE,
+    ROUTER.MENU_PAGE_ROUTE,
+    ROUTER.BLOG_LEFTSIDE_PAGE_ROUTE,
+    ROUTER.RESERVATION_PAGE_ROUTE,
+  ];
 
   return (
     <header className={scrolled ? "fixed" : ""}>
       <Container>
         <div className="row">
-          <div className="logo">
+          <div
+            className="logo"
+            onClick={() => {
+              navigate(routes[0]);
+            }}
+          >
             <img src={logo} alt="" />
           </div>
           <ul>
-            {CONFIG.headerConfig.map(({ id, title, icon }) => {
+            {CONFIG.headerConfig.map(({ id, title, icon }, i) => {
               return (
                 <li
-                key={id}
-                onClick={() => {
-                  if(id === 1) navigate("/");
-                }}
-                className={
-                  id === 2
-                    ? "menu-item"
-                    : id === 3
-                    ? "blog-item"
-                    : id === 5
-                    ? "page-item"
-                    : null
-                }
+                  key={id}
+                  onClick={() => {
+                    if (id === 1) navigate("/");
+                  }}
+                  className={
+                    id === 2
+                      ? "menu-item"
+                      : id === 3
+                      ? "blog-item"
+                      : id === 5
+                      ? "page-item"
+                      : null
+                  }
                 >
                   {icon}
                   {icon}
-                  {title}
-                  {id === 2 ? <Menu /> : null}
+                  {i < routes.length ? (
+                    <Link to={routes[i]}>{title}</Link>
+                  ) : (
+                    title
+                  )}
+                  {id === 2 ? <Menu path={routes[1]} /> : null}
                   {id === 3 ? <Blog /> : null}
                   {id === 5 ? <Pages /> : null}
                 </li>

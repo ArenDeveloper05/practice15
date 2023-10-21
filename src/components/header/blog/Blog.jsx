@@ -1,21 +1,30 @@
-import {CONFIG} from "../../../config"
+import { Link } from "react-router-dom";
+import { CONFIG } from "../../../config";
+import { ROUTER } from "../../../router/router";
 
 const Blog = () => {
   return (
     <div className="blog-dropdown row">
       <ul>
-        {
-            CONFIG.blogListConfig.map(({id, title}) => {
-               return (
-                <li key={id}>
-                    {title}
-                </li>
-               ) 
-            })
-        }
+        {CONFIG.blogListConfig.map(({ id, title }) => {
+          return (
+            <li key={id}>
+              <Link to={ROUTER[extractLinkPath(title)]}>{title}</Link>
+            </li>
+          );
+        })}
       </ul>
     </div>
-  )
+  );
+};
+
+function extractLinkPath(title) {
+  let relPath = title.split(" ").join("-").toLowerCase();
+  for (const key in ROUTER) {
+    if(ROUTER[key].includes(relPath)){
+      return key;
+    }
+  }
 }
 
-export default Blog
+export default Blog;
