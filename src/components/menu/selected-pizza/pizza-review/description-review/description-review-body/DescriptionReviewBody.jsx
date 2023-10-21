@@ -3,8 +3,7 @@ import { useSelector } from 'react-redux';
 import DescriptionReviewForm from "../description-review-form/DescriptionReviewForm";
 const DescriptionReviewBody = ({active}) => {
 
-    const reviewData = useSelector(state => state.pizzaReview.pizza_reviews)
-    console.log(reviewData);
+    const reviewData = useSelector(state => state.pizzaReview.pizza_reviews);
 
   return (
     <div className='description-review-body'>

@@ -12,6 +12,7 @@
   list-style-type: none;
   font-family: var(--template-font);
   margin-bottom: 15px;
+  margin-top: 10px;
   @include cursor;
   color: var(--black);
   @include transition;
@@ -20,6 +21,10 @@
   padding: 5px 15px;
   left: 38.5%;
   min-height: 130px;
+}
+@mixin flex {
+  display: flex;
+  align-items: center;
 }
 header {
   position: fixed;
@@ -31,8 +36,7 @@ header {
   @include transition;
   > .container {
     > .row {
-      display: flex;
-      align-items: center;
+      @include flex;
       justify-content: space-evenly;
       position: relative;
       > .logo {
@@ -43,8 +47,7 @@ header {
         }
       }
       > ul {
-        display: flex;
-        align-items: center;
+        @include flex;
         justify-content: flex-end;
         width: 65%;
         margin-right: 15px;
@@ -74,7 +77,6 @@ header {
               color: var(--template-yellow);
             }
           }
-
           & > svg {
             @include transition;
           }
@@ -165,8 +167,7 @@ header {
       > div {
         padding: 20px;
         width: 33%;
-        display: flex;
-        align-items: center;
+        @include flex;
         @include cursor;
         @include transition;
         &:hover {
@@ -213,7 +214,7 @@ header {
 .blog-dropdown {
   @include dropdown;
   > ul {
-    padding: 5px 30px 0 10px;
+    padding: 0 30px 0 10px;
     > li {
       @include list-item;
       a {
@@ -223,6 +224,9 @@ header {
         @include transition;
       }
       a:hover {
+        color: var(--template-yellow);
+      }
+      &:hover {
         color: var(--template-yellow);
       }
       &:before {
@@ -239,11 +243,13 @@ header {
 }
 .pages-dropdown {
   @include dropdown;
+  padding-top: 0;
   left: 55%;
   > ul {
-    padding: 10px 50px 0 20px;
+    padding: 0 50px 0 20px;
     > li {
       @include list-item;
+      margin-top: 15px;
       &:hover {
         color: var(--template-yellow);
       }
@@ -273,4 +279,26 @@ header {
   opacity: 1;
   visibility: visible;
   transform: translateY(0px);
+}
+.fade-up {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background-color: var(--template-yellow);
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  @include flex;
+  @include cursor;
+  @include transition;
+  justify-content: center;
+  padding-top: 4px;
+  z-index: 1;
+  &:hover {
+    background-color: var(--black);
+  }
+  > a > svg {
+    font-size: 23px;
+    color: var(--white);
+  }
 }
