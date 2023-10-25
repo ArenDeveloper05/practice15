@@ -1,10 +1,7 @@
-li{
+@mixin list-item{
     list-style: none;
     color: var(--white);
     margin: 20px 0;
-}
-h2{
-    color: var(--white);
 }
 footer.footer{
     padding: 50px 50px 20px;
@@ -17,29 +14,36 @@ footer.footer{
         > div, h2 {
             width: 24%;
         }
+        > h2 {
+            color: var(--white);
+        }
+        > div > ul > li {
+            @include list-item;
+        }
     }
     .second-footer-list{
         display: flex;
         justify-content: space-between;
         > ul {
             > li{
-              &.closed {
-                padding: 5px ;
-                text-align: center;
-                width: 80px;
-                background-color: var(--template-yellow);
-                margin-left: 30px;
-               }
-               &.everyday{
-                margin-left: 55px;
-               }
-              &.closed, &.everyday{
-                margin-top: 0;
-               }
+                &.closed {
+                    padding: 5px ;
+                    text-align: center;
+                    width: 80px;
+                    background-color: var(--template-yellow);
+                    margin-left: 30px;
+                }
+                &.everyday{
+                    margin-left: 55px;
+                }
+                &.closed, &.everyday{
+                    margin-top: 0;
+                }
             }
          }
     }
     .third-footer-list > ul > li{
+        @include list-item;
         margin: 10px 0 !important;
         &:hover{
             cursor: pointer;
