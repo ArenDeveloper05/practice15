@@ -7,6 +7,8 @@
         align-items: center;
        > .about-heading-part {
             width: 40%;
+            transition: all 400ms ease 0s;
+            transform: translateX(-650px);
             padding-bottom: 60px;
             > h2 {
                 color: var(--template-yellow);
@@ -43,9 +45,39 @@
        }
        .about-image {
         width: 40%;
+        transform: translateX(650px);
+        transition: all 400ms ease 0s;
             > img {
                 width: 65%;
             }
        }
+       .fadeInLeft {
+        animation: fadeInLeft 1s both;
+       }
+       .fadeInRight {
+        animation: fadeInRight 1s both;
+       }
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(-200px, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(200px, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
     }
 }
