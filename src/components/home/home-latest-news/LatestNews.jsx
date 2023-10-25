@@ -2,6 +2,8 @@ import "./LatestNews.scss";
 import Container from "../../common/container/Container";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import topImg from "../../../assets/Images/home-order-sec-icons/menu-bottom-bg.png"
+import bottomImg from "../../../assets/Images/home-order-sec-icons/menu-top-bg.png";
 
 export const LatestNews = () => {
   const newsdata = useSelector((state) => state.latestNews.latestNewsData);
@@ -9,6 +11,9 @@ export const LatestNews = () => {
   return (
     <section className="news">
       <Container>
+        <div className="news-top-img top-bottom-imgs">
+          <img src={topImg} alt="menu-top" />
+        </div>
         <div className="news-title">
           <p>Recent Events</p>
           <h1>LATEST NEWS</h1>
@@ -47,6 +52,9 @@ export const LatestNews = () => {
               );
             }
           )}
+        </div>
+        <div className="news-bottom-img top-bottom-imgs">
+          <img src={bottomImg} alt="menu-top" />
         </div>
       </Container>
     </section>

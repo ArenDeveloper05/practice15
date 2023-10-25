@@ -1,6 +1,25 @@
 .news {
   //   border: solid purple;
   padding: 100px 0 100px 0;
+  position: relative;
+  &-top-img {
+    top: -36px;
+    left: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-bottom-img {
+    bottom: -46px;
+    left: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
   &-title {
     // border: solid;
     display: flex;
