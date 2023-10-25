@@ -7,6 +7,7 @@ import HomeSlider from "./home-slider/HomeSlider";
 import SpecialProducts from "./speciality/special-products/SpecialProducts";
 import { BestChef } from "./home-best-chef-slider/BestChef";
 import {CustomerReviews} from '../home/home-reviews-slider/CustomerReviews'
+import About from "./about/About";
 
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
       <BestChef/>
       <LatestNews />
       <CustomerReviews/>
+      <About />
       {/* kody grelu eq aystex, baci headeric ev footeric, qani vor nranq gtnvum en Layout-i mej!!!! */}
     </div>
   );
