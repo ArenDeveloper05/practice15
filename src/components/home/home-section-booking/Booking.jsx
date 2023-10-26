@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Container from "../../common/container/Container";
 import call from "../../../assets/home-booking/call.png";
 import { AiOutlineUp } from "react-icons/ai";
+import bottomImg from "../../../assets/Images/home-order-sec-icons/menu-bottom-bg.png";
+import topImg from "../../../assets/Images/home-order-sec-icons/menu-top-bg.png";
 
 export const Booking = () => {
   const [down, setDown] = useState(false);
@@ -16,6 +18,9 @@ export const Booking = () => {
   return (
     <section className="booking">
       <Container>
+        <div className="booking-container-top-img top-bottom-imgs">
+          <img src={bottomImg} alt="menu-top" />
+        </div>
         <div className="booking-container">
           <div className="booking-left-side">
             <p>Fresh From Pizzon</p>
@@ -88,6 +93,9 @@ export const Booking = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="booking-container-bottom-img top-bottom-imgs">
+          <img src={topImg} alt="menu-top" />
         </div>
       </Container>
     </section>

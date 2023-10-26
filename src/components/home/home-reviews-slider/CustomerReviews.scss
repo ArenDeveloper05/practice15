@@ -1,5 +1,4 @@
 .cusomerReviews {
-//   border: solid green;
   background: #121619;
   padding: 100px 0;
   text-align: center;
@@ -20,11 +19,9 @@
     }
   }
   &-slider-item {
-    // border: solid red;
     display: flex;
     gap: 30px;
     &-img {
-    //   border: solid green;
       align-items: center;
       padding: 20px 0px;
       > img {
@@ -43,7 +40,6 @@
       }
     }
     &-review {
-    //   border: solid purple;
       width: calc(100% - 180px);
       background: #fff;
       padding: 40px 50px;
@@ -72,8 +68,7 @@
   }
 }
 
-.swiper-pagination-fraction{
-    border: solid;
-    color: #fd9d3e;
-   
+.swiper-pagination-fraction {
+  border: solid;
+  color: #fd9d3e;
 }
