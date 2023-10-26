@@ -30,10 +30,6 @@
         div {
           padding-left: 30px;
         }
-        button {
-          // width: 135px;
-          border: none;
-          background-color: transparent;
           a {
             background: var(--global-orange-color);
             color: #fff;
@@ -49,17 +45,16 @@
             align-items: center;
             gap: 4px;
             svg {
-              transition: all 400ms ease;
+              transition: all 100ms ease;
             }
           }
           a:hover {
             background: transparent;
             color: var(--global-orange-color);
-            svg {
+            svg{
               color: var(--global-orange-color);
             }
           }
-        }
       }
     }
   }

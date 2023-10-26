@@ -7,6 +7,7 @@ import BlogRightSidePage from "../pages/BlogRightSidePage";
 import MenuPage from "../pages/MenuPage";
 import BlogDetailPage from "../pages/BlogDetailPage";
 import ReservationPage from "../pages/ReservationPage";
+import ErrorPage from "../pages/ErrorPage";
 
 const AppRoutes = () => {
   return (
@@ -29,6 +30,10 @@ const AppRoutes = () => {
       <Route
         path={ROUTER.RESERVATION_PAGE_ROUTE}
         element={<ReservationPage />}
+      />
+      <Route
+        path={ROUTER.ERROR_PAGE_ROUTE}
+        element={<ErrorPage/>}
       />
     </Routes>
   );
