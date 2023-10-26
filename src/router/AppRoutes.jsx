@@ -8,6 +8,8 @@ import MenuPage from "../pages/MenuPage";
 import BlogDetailPage from "../pages/BlogDetailPage";
 import ReservationPage from "../pages/ReservationPage";
 import ErrorPage from "../pages/ErrorPage";
+import ShoppingCartPage from "../pages/ShoppingCartPage";
+
 
 const AppRoutes = () => {
   return (
@@ -35,6 +37,7 @@ const AppRoutes = () => {
         path={ROUTER.ERROR_PAGE_ROUTE}
         element={<ErrorPage/>}
       />
+      <Route path={ROUTER.SHOPPING_CART_ROUTE} element={<ShoppingCartPage />} />
     </Routes>
   );
 };

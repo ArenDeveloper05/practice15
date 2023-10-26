@@ -7,4 +7,5 @@ export const ROUTER = {
   BLOG_PAGE_ROUTE: "/blog-detail",
   RESERVATION_PAGE_ROUTE: "/reservation",
   ERROR_PAGE_ROUTE: "*",
+  SHOPPING_CART_ROUTE:"/cart",
 };
