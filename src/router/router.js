@@ -6,5 +6,6 @@ export const ROUTER = {
   BLOG_RIGHTSIDE_PAGE_ROUTE: "/blog-rightside",
   BLOG_PAGE_ROUTE: "/blog-detail",
   RESERVATION_PAGE_ROUTE: "/reservation",
+  CHECKOUT_PAGE_ROUTE: "/checkout",
   SHOPPING_CART_ROUTE:"/cart",
 };

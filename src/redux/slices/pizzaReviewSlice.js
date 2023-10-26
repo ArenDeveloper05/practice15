@@ -11,25 +11,35 @@ import pepper from "../../assets/header-images/menu-list-images/pepper.png";
 import chicken_meat from "../../assets/header-images/menu-list-images/chicken_meat.png";
 import assorti from "../../assets/header-images/menu-list-images/olive.png";
 
-// Pizza Review Comment 
+// Pizza Review Comment
 import comment1 from "../../assets/header-images/pizza-review/comment1.jpg";
 import comment2 from "../../assets/header-images/pizza-review/comment2.jpg";
 import comment3 from "../../assets/header-images/pizza-review/comment3.jpg";
+import pizzaa1 from "./../../assets/checkout/pizzaa1.png";
+import pizzaa2 from "./../../assets/checkout/pizzaa2.png";
+import pizzaa3 from "./../../assets/checkout/pizzaa3.png";
 
 const months = [
-  "January", "February",
-  "March", "April", "May",
-  "June", "July", "August",
-  "September", "October",
-  "November", "December"
-];
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+]
 
 let today = new Date();
 let dd = today.getDate();
 let mm = String(months[today.getMonth()]).substring(0, 3); //January is 0!
 let yyyy = today.getFullYear();
 
-today = '(' + dd + ' ' + mm + ' ' + yyyy + ')';
+today = "(" + dd + " " + mm + " " + yyyy + ")";
 
 const initialState = {
   pizzas: [
@@ -85,27 +95,27 @@ const initialState = {
   pizzaThumbnails: [
     {
       id: 1,
-      img: onion
+      img: onion,
     },
     {
       id: 2,
-      img: onion
+      img: onion,
     },
     {
       id: 3,
-      img: olive
+      img: olive,
     },
     {
       id: 4,
-      img: pepper
+      img: pepper,
     },
     {
       id: 5,
-      img: chicken_meat
+      img: chicken_meat,
     },
     {
       id: 6,
-      img: assorti
+      img: assorti,
     }
   ],
   pizza_reviews: [
@@ -137,6 +147,28 @@ const initialState = {
   pizza_in_basket: [
     {
       id: 1,
+      img: pizzaa1,
+      name: "Margherita Pizza",
+      price: "$14.99",
+      qty: 1,
+    },
+    {
+      id: 2,
+      img: pizzaa2,
+      name: "Greek Pizza",
+      price: "$14.99",
+      qty: 1,
+    },
+    {
+      id: 3,
+      img: pizzaa3,
+      name: "BARBECUE PIZZA",
+      price: "$20.00",
+      qty: 2,
+    },
+  ],
+  filteredPizza: [],
+};
       img: margherita,
       name: 'Margherita Pizza',
       price: '$14.99',
@@ -162,6 +194,9 @@ const pizzaReviewSlice = createSlice({
     filter: (state, { payload }) => {
       state.filteredPizza = state.pizzas.filter((item) => item.id === payload);
     },
+  },
+});
+
     deletePizzaFromCart: (state, { payload }) => {
       state.pizza_in_basket = state.pizza_in_basket.filter((item) => item.id !== payload.id);
     },
@@ -181,6 +216,4 @@ const pizzaReviewSlice = createSlice({
 })
 
 export default pizzaReviewSlice.reducer;
-export const { filter } = pizzaReviewSlice.actions;
-export const { deletePizzaFromCart } = pizzaReviewSlice.actions;
-export const { countTotalOfEachPizza } = pizzaReviewSlice.actions;
+export const { countTotalOfEachPizza, filter, deletePizzaFromCart } = pizzaReviewSlice.actions;

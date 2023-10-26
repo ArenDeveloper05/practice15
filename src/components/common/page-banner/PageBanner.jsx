@@ -1,23 +1,35 @@
-import './PageBanner.scss';
-import Container from '../container/Container';
+import "./PageBanner.scss";
+import Container from "../container/Container";
 
-const PageBanner = ({background, title, firstDirectionPoint, secondDirectionPoint, thirdDirectionPoint}) => {
+const PageBanner = ({
+  background,
+  title,
+  firstDirectionPoint,
+  secondDirectionPoint,
+  thirdDirectionPoint,
+}) => {
   return (
     <section className="banner">
-      <div className="banner-background" id='#top' style={{backgroundImage: `url(${background})`}}></div>
+      <div
+        className="banner-background"
+        id="#top"
+        style={{ backgroundImage: `url(${background})` }}
+      ></div>
       <Container>
-        <div className='banner-direction'>
+        <div className="banner-direction">
           <h1>{title}</h1>
           <p>
             <span>{firstDirectionPoint}</span>
-            /
             <span>{secondDirectionPoint}</span>
-            <span>{`${thirdDirectionPoint ? '/' : ''}`}</span>
+            <span>
+              {thirdDirectionPoint && "/ "}
+              {thirdDirectionPoint}
+            </span>
           </p>
         </div>
       </Container>
     </section>
-  )
-}
+  );
+};
 
-export default PageBanner
+export default PageBanner;
