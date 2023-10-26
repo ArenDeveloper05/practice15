@@ -15,8 +15,6 @@ import assorti from "../../assets/header-images/menu-list-images/olive.png";
 import comment1 from "../../assets/header-images/pizza-review/comment1.jpg";
 import comment2 from "../../assets/header-images/pizza-review/comment2.jpg";
 import comment3 from "../../assets/header-images/pizza-review/comment3.jpg";
-
-//Checkout section pizzas
 import pizzaa1 from "./../../assets/checkout/pizzaa1.png";
 import pizzaa2 from "./../../assets/checkout/pizzaa2.png";
 import pizzaa3 from "./../../assets/checkout/pizzaa3.png";
@@ -34,7 +32,7 @@ const months = [
   "October",
   "November",
   "December",
-];
+]
 
 let today = new Date();
 let dd = today.getDate();
@@ -51,8 +49,7 @@ const initialState = {
       name: "Pepperoni",
       price: "$12.99",
       last_price: "$30.50",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravid: 1, mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravid: 1, mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry."
     },
     {
       id: 2,
@@ -60,8 +57,7 @@ const initialState = {
       name: "Vegetarian",
       price: "$12.99",
       last_price: "$30.50",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravid: 1, mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravid: 1, mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry."
     },
     {
       id: 3,
@@ -69,8 +65,7 @@ const initialState = {
       name: "Specialty",
       price: "$12.99",
       last_price: "$30.50",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravid: 1, mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravid: 1, mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry."
     },
     {
       id: 4,
@@ -78,8 +73,7 @@ const initialState = {
       name: "Ham & Cheese",
       price: "$12.99",
       last_price: "$30.50",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravid: 1, mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravid: 1, mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry."
     },
     {
       id: 5,
@@ -87,8 +81,7 @@ const initialState = {
       name: "Onion",
       price: "$12.99",
       last_price: "$30.50",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravid: 1, mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravid: 1, mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry."
     },
     {
       id: 6,
@@ -96,8 +89,7 @@ const initialState = {
       name: "Margheritapizza",
       price: "$12.99",
       last_price: "$30.50",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. ipsum primis in faucibus orci luctus et ultricesLorem Ipsum is simply dummy text of the printing and typesetting industry."
     },
   ],
   pizzaThumbnails: [
@@ -124,35 +116,32 @@ const initialState = {
     {
       id: 6,
       img: assorti,
-    },
+    }
   ],
   pizza_reviews: [
     {
       id: 1,
       img: comment1,
       name: "John Doe",
-      description:
-        "Lorem ipsum dolor sit amet adipiscing elit labore dolore that sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.",
+      description: "Lorem ipsum dolor sit amet adipiscing elit labore dolore that sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.",
       reply_button: "Reply",
-      date: today,
+      date: today
     },
     {
       id: 2,
       img: comment2,
       name: "John Doe",
-      description:
-        "Lorem ipsum dolor sit amet adipiscing elit labore dolore that sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.",
+      description: "Lorem ipsum dolor sit amet adipiscing elit labore dolore that sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.",
       reply_button: "Reply",
-      date: today,
+      date: today
     },
     {
       id: 3,
       img: comment3,
       name: "John Doe",
-      description:
-        "Lorem ipsum dolor sit amet adipiscing elit labore dolore that sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.",
+      description: "Lorem ipsum dolor sit amet adipiscing elit labore dolore that sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.",
       reply_button: "Reply",
-      date: today,
+      date: today
     },
   ],
   pizza_in_basket: [
@@ -180,6 +169,23 @@ const initialState = {
   ],
   filteredPizza: [],
 };
+      img: margherita,
+      name: 'Margherita Pizza',
+      price: '$14.99',
+      qty: 1,
+      total: null,
+    },
+    {
+      id: 2,
+      img: specialty,
+      name: 'Greek Pizza',
+      price: '$14.99',
+      qty: 1,
+      total: null,
+    }
+  ],
+  filteredPizza: []
+}
 
 const pizzaReviewSlice = createSlice({
   name: "pizzaReview",
@@ -191,5 +197,23 @@ const pizzaReviewSlice = createSlice({
   },
 });
 
+    deletePizzaFromCart: (state, { payload }) => {
+      state.pizza_in_basket = state.pizza_in_basket.filter((item) => item.id !== payload.id);
+    },
+    countTotalOfEachPizza: (state, { payload }) => {
+      state.pizza_in_basket = state.pizza_in_basket.map((item) => {
+        if (item.id === payload.id) {
+          return {
+            ...item,
+            qty: Number(payload.qty),
+            total: `$${payload.qty * item.price.slice(1)}`,
+          };
+        }
+        return item;
+      })
+    },
+  }
+})
+
 export default pizzaReviewSlice.reducer;
-export const { filter } = pizzaReviewSlice.actions;
+export const { countTotalOfEachPizza, filter, deletePizzaFromCart } = pizzaReviewSlice.actions;
