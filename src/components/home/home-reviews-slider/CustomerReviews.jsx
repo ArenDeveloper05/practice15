@@ -3,7 +3,7 @@ import Container from "../../common/container/Container";
 import "./CustomerReviews.scss";
 import { useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, A11y, Autoplay,  Pagination,} from "swiper/modules";
+import { Navigation, A11y, Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import { ReviewsSlide } from "./ReviewsSlide";
 
@@ -17,20 +17,19 @@ export const CustomerReviews = () => {
           <p>What Say Our Clients</p>
           <h1>CUSTOMER REVIEWS</h1>
         </div>
-
         <div className="cusomerReviews-slider">
           <Swiper
-          modules={[Navigation, A11y, Autoplay, Pagination]}
-          // direction="vertical" 
-          space={50}
-          slidesPerView={1}
-          grabCursor
-          pagination={{ clickable: true }}
-          allowTouchMove={true}
-          loop={true}
-          autoplay={{
-            delay: 3000,
-          }}
+            modules={[Navigation, A11y, Autoplay, Pagination]}
+            // direction="vertical"
+            space={50}
+            slidesPerView={1}
+            grabCursor
+            pagination={{ clickable: true }}
+            allowTouchMove={true}
+            loop={true}
+            autoplay={{
+              delay: 3000,
+            }}
           >
             {reviews.map(({ id, text, name, speciality, img }) => {
               return (

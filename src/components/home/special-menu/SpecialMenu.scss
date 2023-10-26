@@ -1,5 +1,13 @@
 .special-menu {
   background-color: #121619;
+  padding: 114px 0 57px 0;
+  position: relative;
+  &-top-img{
+    img{
+      top: -48px;
+      left: 0;
+    }
+  }
   &-title {
     text-align: center;
     p {
