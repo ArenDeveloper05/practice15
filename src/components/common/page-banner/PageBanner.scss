@@ -1,7 +1,7 @@
 .banner {
   position: relative;
   &-background {
-    height: 50vh;
+    height: 60vh;
     background: no-repeat center / cover;
     &:after {
       content: "";
@@ -17,12 +17,13 @@
   > .container {
     display: block;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     > .banner-direction {
       color: var(--white);
       text-align: center;
+      animation: fadeUp 800ms ease;
       > h1 {
         color: var(--white);
         font-size: 50px;
@@ -33,5 +34,16 @@
         margin: 0 10px;
       }
     }
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }

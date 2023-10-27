@@ -3,6 +3,7 @@ import Container from "../../common/container/Container";
 import "./HomeOrderSection.scss";
 import OrderItem from "./order-item/OrderItem";
 import top from "../../../assets/Images/home-slider-images/order-top.png";
+import bottom from '../../../assets/pattern/order-bottom.png';
 
 const HomeOrderSection = () => {
   const { home_order_info } = CONFIG;
@@ -18,6 +19,7 @@ const HomeOrderSection = () => {
           })}
         </div>
       </Container>
+      <img src={bottom} alt="img" className="home-order-section-bottom" />
     </div>
   );
 };

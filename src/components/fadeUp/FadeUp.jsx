@@ -8,10 +8,10 @@ const FadeUp = () => {
     // Function to handle the scroll event
     const handleScroll = () => {
       // Check if the scroll position is greater than 0
-      if (window.scrollY > 0) {
-        setScrolled(true);
+      if (window.scrollY > 0 && scrolled === true) {
+        return
       } else {
-        setScrolled(false);
+        setScrolled(true);
       }
     };
 

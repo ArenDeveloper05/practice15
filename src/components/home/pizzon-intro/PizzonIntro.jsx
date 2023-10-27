@@ -1,21 +1,29 @@
-import './About.scss';
-import Container from '../../common/container/Container';
-import about_pizzon from '../../../assets/home/about/about-pizzon.png';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-const About = () => {
+import about_pizzon from '../../../assets/home/about/about-pizzon.png';
+import about_banner from '../../../assets/about/about_banner.jpg';
+
+import Container from '../../common/container/Container';
+import PageBanner from '../../common/page-banner/PageBanner';
+
+
+import './PizzonIntro.scss';
+import { useNavigate } from 'react-router-dom';
+
+const AboutPizzon = () => {
+  const navigate = useNavigate();
     
-    const [scrolled, setScrolled] = useState(false);
+    const [scrolledIntro, setScrolledIntro] = useState(false);
     useEffect(() => {
       // Function to handle the scroll event
       const handleScroll = () => {
-        // Check if the scroll position is greater than 0
-        if (window.scrollY > 5500) {
-          setScrolled(true);
-        } else {
-          setScrolled(false);
-        }
+        if(window.scrollY > 5700) {
+          if(scrolledIntro === true) {
+              return
+          } else {
+            setScrolledIntro(true);
+          }
+      }
       };
   
       // Add the scroll event listener when the component mounts
@@ -25,19 +33,19 @@ const About = () => {
       return () => {
         window.removeEventListener("scroll", handleScroll);
       };
-    }, []);
+    });
 
   return (
-    <section className='about-pizzon'>
+    <section className='pizzon-intro'>
       <Container>
-        <div className={`about-heading-part ${scrolled ? 'fadeInLeft' : ''}`}>
+        <div className={`pizzon-intro-top ${scrolledIntro ? 'fadeInLeft' : ''}`}>
             <h2>Deilicous Restaurant</h2>
             <h1>ABOUT PIZZON</h1>
             <p>Sit amet consectetur adipisicing elit. Deserunt, ducimus architecto. Laboriosam ipsam nam fugiat, qui debitis perferendis ex illo? Nesciunt aspernatur velit mollitia iste. Pariatur esse dolore beatae sequi.
             Quos facilis voluptatum molestias explicabo, reiciendis amet itaque accusamus et quidem reprehenderit, expedita quibusdam ut iusto mollitia consectetur nostrum totam quis facere repellat veniam atque? Quisquam cupiditate nulla explicabo id?</p>
-            <a href="#">VIEW MORE</a>
+            <a href="" onClick={() => navigate('/about')}>VIEW MORE</a>
         </div>
-        <div className={`about-image ${scrolled ? 'fadeInRight' : ''}`}>
+        <div className={`pizzon-intro-image ${scrolledIntro ? 'fadeInRight' : ''}`}>
             <img src={about_pizzon} alt="" />
         </div>
       </Container>
@@ -45,4 +53,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutPizzon

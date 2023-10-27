@@ -53,15 +53,20 @@
     }
   }
 
-  &-top {
+  &-top, &-bottom {
     position: absolute;
-    top: -60px;
     left: 0;
     width: 100%;
     height: 100px;
     z-index: 1;
     object-fit: cover;
     padding: 0 24px;
+  }
+  &-top {
+    top: -60px;
+  }
+  &-bottom {
+    bottom: -80px;
   }
 }
 

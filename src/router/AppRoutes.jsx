@@ -7,6 +7,7 @@ import BlogRightSidePage from "../pages/BlogRightSidePage";
 import MenuPage from "../pages/MenuPage";
 import BlogDetailPage from "../pages/BlogDetailPage";
 import ReservationPage from "../pages/ReservationPage";
+import AboutPage from "../pages/AboutPage";
 
 const AppRoutes = () => {
   return (
@@ -30,6 +31,7 @@ const AppRoutes = () => {
         path={ROUTER.RESERVATION_PAGE_ROUTE}
         element={<ReservationPage />}
       />
+      <Route path={ROUTER.ABOUT_PAGE_ROUTE} element={<AboutPage />} />
     </Routes>
   );
 };

@@ -10,7 +10,7 @@ const SpecialProducts = () => {
   );
   const navigate = useNavigate();
   return (
-    <section>
+    <section className="special__products">
       <Container>
         <div className="products">
           <h4 className="products-header">Fresh From Pizzon</h4>

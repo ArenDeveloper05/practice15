@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,200&family=PT+Sans+Narrow:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=EB+Garamond:wght@500&family=Inter:wght@300&family=Open+Sans:ital,wght@1,300&family=PT+Sans+Narrow&family=Pacifico&family=Poppins:wght@200&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=EB+Garamond:wght@500&family=Inter:wght@300&family=Open+Sans:ital,wght@1,300&family=PT+Sans+Narrow:wght@400;700&family=Pacifico&family=Poppins:wght@200&family=Roboto&display=swap");
+.special__products {
+  padding: 150px 120px 100px;
+}
 .products {
   text-align: center;
   font-family: PT Sans Narrow, sans-serif;
@@ -15,7 +18,7 @@
   &-items {
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: 40px;
     margin-top: 20px;
     cursor: pointer;
 
