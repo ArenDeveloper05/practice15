@@ -20,14 +20,10 @@ const PageBanner = ({
           <h1>{title}</h1>
           <p>
             <span>{firstDirectionPoint}</span>
+            {secondDirectionPoint && '/'}
             <span>{secondDirectionPoint}</span>
-            {thirdDirectionPoint ? '/' : ''}
-            {/* <span>{`${thirdDirectionPoint ? thirdDirectionPoint : null}`}</span> */}
-            {thirdDirectionPoint ? <span>{thirdDirectionPoint}</span> : null}
-            <span>
-              {thirdDirectionPoint && "/ "}
-              {thirdDirectionPoint}
-            </span>
+              {thirdDirectionPoint && "/"}
+            <span>{thirdDirectionPoint}</span>
           </p>
         </div>
       </Container>

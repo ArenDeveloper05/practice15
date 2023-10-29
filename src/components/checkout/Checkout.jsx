@@ -13,8 +13,8 @@ const Checkout = () => {
       <PageBanner
         background={checkoutBanner}
         title={"CHECKOUT"}
-        firstDirectionPoint={"Home   / "}
-        secondDirectionPoint={"Cart "}
+        firstDirectionPoint={"Home"}
+        secondDirectionPoint={"Cart"}
         thirdDirectionPoint={"Checkout"}
       />
       <section>

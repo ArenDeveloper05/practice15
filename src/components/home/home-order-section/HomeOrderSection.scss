@@ -6,14 +6,26 @@
   justify-content: center;
   position: relative;
   padding: 100px 0;
-
+  .top-bottom-imgs {
+    position: absolute;
+    > img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &-top-img {
+    top: -80px;
+  }
+  &-bottom-img {
+    bottom: -80px;
+  }
   &-items {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 36px;
   }
-
+  
   &-item {
     max-width: 380px;
     align-items: center;
@@ -46,45 +58,12 @@
       line-height: 1.4em;
     }
   }
-
   &-item:hover {
     img {
       filter: invert(1);
     }
   }
-
-  &-top, &-bottom {
-    position: absolute;
-  &-top-img {
-    top: -60px;
-    left: 0;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  &-bottom-img {
-    bottom: -60px;
-    left: 0;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  &-bottom-img,
-  &-top-img {
-    padding: 0 24px;
-  }
-  &-top {
-    top: -60px;
-  }
-  &-bottom {
-    bottom: -80px;
-  }
 }
-
 .smooth-animation {
   display: flex;
   animation: smoothAppearenceFromBottom 1s both;

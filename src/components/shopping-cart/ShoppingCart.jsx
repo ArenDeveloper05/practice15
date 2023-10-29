@@ -5,8 +5,12 @@ import "./ShoppingCart.scss";
 import ShoppingCartTable from "./shopping-cart-table/ShoppingCartTable";
 import { FaAngleLeft } from "react-icons/fa";
 import Taxes from "./shopping-cart-table/taxes/Taxes";
+import { useNavigate } from "react-router";
 
 const ShoppingCart = () => {
+
+  const navigate = useNavigate();
+
   return (
     <section className="shopping-cart">
       <PageBanner
@@ -30,7 +34,7 @@ const ShoppingCart = () => {
             </a>
           </div>
           <Taxes />
-          <a href="#" className="button prev">
+          <a className="button prev" onClick={() => navigate('/checkout')}>
             Proceed to checkout
           </a>
         </div>

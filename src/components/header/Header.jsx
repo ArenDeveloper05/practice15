@@ -7,6 +7,7 @@ import { CONFIG } from "../../config";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ROUTER } from "../../router/router";
+import ShoppingCardDropdown from "./shopping-card-dropdown/ShoppingCardDropdown";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -64,6 +65,8 @@ const Header = () => {
                       ? "blog-item"
                       : id === 5
                       ? "page-item"
+                      : id === 7
+                      ? "shopping_cart_item"
                       : null
                   }
                 >
@@ -77,6 +80,7 @@ const Header = () => {
                   {id === 2 ? <Menu path={routes[1]} /> : null}
                   {id === 3 ? <Blog /> : null}
                   {id === 5 ? <Pages /> : null}
+                  {id === 7 ? <ShoppingCardDropdown /> : null}
                 </li>
               );
             })}
