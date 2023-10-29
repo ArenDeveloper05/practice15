@@ -13,28 +13,7 @@ button, input{
     outline: none;
 }
 
-.swiper-button-prev, .swiper-button-next {
-    color: #999;
-    padding: 10px 20px 10px 22px;
-    font-weight: 900;
-    z-index: 150;
-    @include transition;
-    @include cursor;
-    &:after {
-        font-size: 20px;
-    }
-    &:hover {
-        opacity: 1 !important;
-        background-color: var(--template-yellow) !important;
-        color: var(--white) !important;
-    }
-}
-.swiper-button-prev {
-    left: var(--swiper-navigation-sides-offset, -10px) ;
-}
-.swiper-button-next {
-    right: var(--swiper-navigation-sides-offset, 0px) ;
-}
+
 .pizza-order {
     img {
         width: 100%;
@@ -87,6 +66,28 @@ button, input{
                     display: block;
                     padding: 12px 26px 0px 17px;
                 }
+            }
+            .swiper-button-prev, .swiper-button-next {
+                color: #999;
+                padding: 10px 20px 10px 22px;
+                font-weight: 900;
+                z-index: 150;
+                @include transition;
+                @include cursor;
+                &:after {
+                    font-size: 20px;
+                }
+                &:hover {
+                    opacity: 1 !important;
+                    background-color: var(--template-yellow) !important;
+                    color: var(--white) !important;
+                }
+            }
+            .swiper-button-prev {
+                left: var(--swiper-navigation-sides-offset, -10px) ;
+            }
+            .swiper-button-next {
+                right: var(--swiper-navigation-sides-offset, 0px) ;
             }
             .pizza-preview-modal {
                 position: absolute;

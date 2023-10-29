@@ -1,24 +1,28 @@
 import React from "react";
-import Container from "../../common/container/Container";
-import "./BestChef.scss";
+
 import { useSelector } from "react-redux";
-// import bg from "../../../assets/home-bestChef/chef-bottom-bg.png";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y, Autoplay } from "swiper/modules";
-import "swiper/css";
+
 import { BestChefSlide } from "./BestChefSlide";
+import Container from "../../common/container/Container";
+
+import top from '../../../assets/pattern/chef-top-bg.png';
+import bottom from '../../../assets/pattern/chef-bottom-bg.png';
+
+import "./BestChef.scss";
+import "swiper/css";
+
 
 export const BestChef = () => {
   const chefs = useSelector((state) => state.bestChef.chefsData);
 
   return (
     <section className="bestChef">
-      {/* <div className="bestChef-bg">
-        <img src={bg} alt="" />
+      <div className="bestChef-top-picture">
+        <img src={top} alt="" />
       </div>
-      <div className="bestChef-bg-2">
-        <img src={bg} alt="" className="bestChef-bg-bottom" />
-      </div> */}
       <Container>
         <div className="bestChef-title">
           <p>Meet our experts</p>
@@ -52,6 +56,9 @@ export const BestChef = () => {
           </Swiper>
         </div>
       </Container>
+      <div className="bestChef-bottom-picture">
+        <img src={bottom} />
+      </div>
     </section>
   );
 };

@@ -6,6 +6,9 @@ import { useState } from "react";
 import Container from "../../common/container/Container";
 import topImg from "../../../assets/Images/home-order-sec-icons/menu-top-bg.png";
 
+import top from '../../../assets/pattern/menu-top-bg.png';
+import bottom from '../../../assets/pattern/menu-bottom-bg.png';
+
 const SpecialMenu = () => {
   const [active, setActive] = useState(1);
   const data = useSelector((state) => state.specialMenu.filteredMenu);
@@ -13,6 +16,9 @@ const SpecialMenu = () => {
 
   return (
     <section className="special-menu">
+      <div className="menu-top-picture">
+       <img src={top}/>
+      </div>
       <Container>
         <div className="special-menu-title">
           <p>Fresh From Pizzon</p>
@@ -62,6 +68,9 @@ const SpecialMenu = () => {
           <img src={topImg} alt="menu-top" className="top-bottom-imgs"/>
         </div>
       </Container>
+      <div className="menu-bottom-picture">
+        <img src={bottom}/>
+      </div>
     </section>
   );
 };

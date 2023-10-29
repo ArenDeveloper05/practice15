@@ -3,6 +3,7 @@ import Container from "../../common/container/Container";
 import "./HomeOrderSection.scss";
 import OrderItem from "./order-item/OrderItem";
 import top from "../../../assets/Images/home-slider-images/order-top.png";
+import bottom from '../../../assets/pattern/order-bottom.png';
 import bottom from "../../../assets/Images/home-order-sec-icons/order-bottom.png";
 
 const HomeOrderSection = () => {
@@ -21,6 +22,8 @@ const HomeOrderSection = () => {
           })}
         </div>
       </Container>
+      <img src={bottom} alt="img" className="home-order-section-bottom" />
+    </div>
       <div className="home-order-section-bottom-img top-bottom-imgs">
         <img src={bottom} alt="img" className="home-order-section-bottom" />
       </div>

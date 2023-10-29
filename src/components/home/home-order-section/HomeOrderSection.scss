@@ -52,6 +52,9 @@
       filter: invert(1);
     }
   }
+
+  &-top, &-bottom {
+    position: absolute;
   &-top-img {
     top: -60px;
     left: 0;
@@ -73,6 +76,12 @@
   &-bottom-img,
   &-top-img {
     padding: 0 24px;
+  }
+  &-top {
+    top: -60px;
+  }
+  &-bottom {
+    bottom: -80px;
   }
 }
 

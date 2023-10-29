@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { ROUTER } from "./router";
+
 import HomePage from "../pages/HomePage";
 import SelectedPizzaPage from "../pages/SelectedPizzaPage";
 import BlogLeftSidePage from "../pages/BlogLeftSidePage";
@@ -7,6 +8,7 @@ import BlogRightSidePage from "../pages/BlogRightSidePage";
 import MenuPage from "../pages/MenuPage";
 import BlogDetailPage from "../pages/BlogDetailPage";
 import ReservationPage from "../pages/ReservationPage";
+import AboutPage from "../pages/AboutPage";
 import ErrorPage from "../pages/ErrorPage";
 import CheckoutPage from "../pages/CheckoutPage";
 import ShoppingCartPage from "../pages/ShoppingCartPage";
@@ -34,6 +36,7 @@ const AppRoutes = () => {
         path={ROUTER.RESERVATION_PAGE_ROUTE}
         element={<ReservationPage />}
       />
+      <Route path={ROUTER.ABOUT_PAGE_ROUTE} element={<AboutPage />} />
       <Route
         path={ROUTER.ERROR_PAGE_ROUTE}
         element={<ErrorPage/>}

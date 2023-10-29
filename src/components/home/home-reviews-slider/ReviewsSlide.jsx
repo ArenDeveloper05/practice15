@@ -2,14 +2,14 @@ import React from "react";
 
 export const ReviewsSlide = ({ id, text, name, speciality, img }) => {
   return (
-    <div className="cusomerReviews-slider-item">
-      <div className="cusomerReviews-slider-item-img">
+    <div className="customerReviews-slider-item">
+      <div className="customerReviews-slider-item-img">
         <img src={img} alt="" />
         <p>{name}</p>
       </div>
-      <div className="cusomerReviews-slider-item-review">
+      <div className="customerReviews-slider-item-review">
     <span>{text}</span>
-    <div className="cusomerReviews-slider-item-review-author">
+    <div className="customerReviews-slider-item-review-author">
     <p>{name}</p> <p>{speciality}</p>
     </div>
       </div>
