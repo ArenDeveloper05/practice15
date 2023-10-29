@@ -151,6 +151,7 @@ const initialState = {
       name: "Margherita Pizza",
       price: "$14.99",
       qty: 1,
+      total: null  
     },
     {
       id: 2,
@@ -158,6 +159,7 @@ const initialState = {
       name: "Greek Pizza",
       price: "$14.99",
       qty: 1,
+      total: null
     },
     {
       id: 3,
@@ -165,27 +167,11 @@ const initialState = {
       name: "BARBECUE PIZZA",
       price: "$20.00",
       qty: 2,
+      total: null
     },
   ],
   filteredPizza: [],
 };
-      img: margherita,
-      name: 'Margherita Pizza',
-      price: '$14.99',
-      qty: 1,
-      total: null,
-    },
-    {
-      id: 2,
-      img: specialty,
-      name: 'Greek Pizza',
-      price: '$14.99',
-      qty: 1,
-      total: null,
-    }
-  ],
-  filteredPizza: []
-}
 
 const pizzaReviewSlice = createSlice({
   name: "pizzaReview",
@@ -194,9 +180,6 @@ const pizzaReviewSlice = createSlice({
     filter: (state, { payload }) => {
       state.filteredPizza = state.pizzas.filter((item) => item.id === payload);
     },
-  },
-});
-
     deletePizzaFromCart: (state, { payload }) => {
       state.pizza_in_basket = state.pizza_in_basket.filter((item) => item.id !== payload.id);
     },
@@ -212,8 +195,8 @@ const pizzaReviewSlice = createSlice({
         return item;
       })
     },
-  }
-})
+  },
+});
 
 export default pizzaReviewSlice.reducer;
 export const { countTotalOfEachPizza, filter, deletePizzaFromCart } = pizzaReviewSlice.actions;
