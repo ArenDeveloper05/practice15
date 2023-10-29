@@ -64,9 +64,6 @@ const SpecialMenu = () => {
           })}
           {data.length === 0 && <h2>There is Nothing</h2>}
         </div>
-        <div className="special-menu-top-img">
-          <img src={topImg} alt="menu-top" className="top-bottom-imgs"/>
-        </div>
       </Container>
       <div className="menu-bottom-picture">
         <img src={bottom}/>
