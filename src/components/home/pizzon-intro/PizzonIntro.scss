@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-.about-pizzon {
+.pizzon-intro {
     padding: 130px 70px 100px;
     > .container {
         display: flex;
         justify-content: space-around;
         align-items: center;
         overflow: hidden;
-       > .about-heading-part {
+       > .pizzon-intro-top {
             width: 40%;
             transition: all 400ms ease 0s;
             transform: translateX(-650px);
@@ -44,7 +44,7 @@
                 }
             }
        }
-       .about-image {
+       .pizzon-intro-image {
         width: 40%;
         transform: translateX(650px);
         transition: all 400ms ease 0s;
@@ -58,17 +58,6 @@
        .fadeInRight {
         animation: fadeInRight 1s both;
        }
-    }
-}
-
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translate3d(-200px, 0, 0);
-    }
-    100% {
-        opacity: 1;
-        transform: none;
     }
 }
 

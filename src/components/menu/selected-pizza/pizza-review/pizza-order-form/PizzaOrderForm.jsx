@@ -57,7 +57,7 @@ const PizzaOrderForm = () => {
         <div className="quantity-product">
           <h2>Qty:</h2>
           <input 
-          type="text" 
+          type="number" 
           value={value}
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}

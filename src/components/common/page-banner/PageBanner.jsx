@@ -21,6 +21,9 @@ const PageBanner = ({
           <p>
             <span>{firstDirectionPoint}</span>
             <span>{secondDirectionPoint}</span>
+            {thirdDirectionPoint ? '/' : ''}
+            {/* <span>{`${thirdDirectionPoint ? thirdDirectionPoint : null}`}</span> */}
+            {thirdDirectionPoint ? <span>{thirdDirectionPoint}</span> : null}
             <span>
               {thirdDirectionPoint && "/ "}
               {thirdDirectionPoint}
