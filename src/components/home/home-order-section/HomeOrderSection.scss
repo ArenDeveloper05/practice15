@@ -55,11 +55,26 @@
 
   &-top, &-bottom {
     position: absolute;
+  &-top-img {
+    top: -60px;
     left: 0;
-    width: 100%;
-    height: 100px;
-    z-index: 1;
-    object-fit: cover;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-bottom-img {
+    bottom: -60px;
+    left: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-bottom-img,
+  &-top-img {
     padding: 0 24px;
   }
   &-top {

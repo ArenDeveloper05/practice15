@@ -19,12 +19,10 @@ const BlogDetailComments = () => {
                   <h3>{title}</h3>
                   <p>{text}</p>
                 </div>
-                <button>
                   <a href="#">
                     <FaReply />
                     {link}
                   </a>
-                </button>
               </div>
             </div>
           );

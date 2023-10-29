@@ -17,6 +17,14 @@
   .menu-bottom-picture {
     bottom: -95px;
   }
+  padding: 114px 0 57px 0;
+  position: relative;
+  &-top-img{
+    img{
+      top: -48px;
+      left: 0;
+    }
+  }
   &-title {
     text-align: center;
     p {
@@ -27,7 +35,7 @@
     }
     h2 {
       font-size: 70px;
-      color: white;
+      color: #fff;
       line-height: 58px;
       letter-spacing: 2px;
       font-weight: 700;

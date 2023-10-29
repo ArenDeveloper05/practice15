@@ -4,6 +4,7 @@ import { filter } from "../../../redux/slices/SpecialMenuSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import Container from "../../common/container/Container";
+import topImg from "../../../assets/Images/home-order-sec-icons/menu-top-bg.png";
 
 import top from '../../../assets/pattern/menu-top-bg.png';
 import bottom from '../../../assets/pattern/menu-bottom-bg.png';
@@ -62,6 +63,9 @@ const SpecialMenu = () => {
             );
           })}
           {data.length === 0 && <h2>There is Nothing</h2>}
+        </div>
+        <div className="special-menu-top-img">
+          <img src={topImg} alt="menu-top" className="top-bottom-imgs"/>
         </div>
       </Container>
       <div className="menu-bottom-picture">

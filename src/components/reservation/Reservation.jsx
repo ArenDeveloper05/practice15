@@ -7,7 +7,9 @@ import { AiOutlineDown } from "react-icons/ai";
 
 const Reservation = () => {
   const [down, setDown] = useState(false);
+  const [downWard, setdownWard] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [selectQuantity, setSelectQuantity] = useState(null);
 
   const time = [
     { id: 1, title: "Hour" },
@@ -89,16 +91,47 @@ const Reservation = () => {
                 <div
                   className="book-table-inputs-right-visible"
                   style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    console.log(123);
+                    setdownWard((prev) => !prev);
+                  }}
                 >
-                  <p>Number of people</p>
+                  <p>
+                    {!selectQuantity ? "Number of people" : `${selectQuantity}`}
+                  </p>
+
                   <AiOutlineDown
                     style={{
-                      animation: down
+                      animation: downWard
                         ? "rotate180 0.3s linear"
                         : "rotate00 0.3s linear",
-                      transform: down ? "rotate(180deg)" : "rotate(0deg)",
+                      transform: downWard ? "rotate(180deg)" : "rotate(0deg)",
                     }}
                   />
+                </div>
+                <div
+                  className="book-table-inputs-right-covered"
+                  style={{
+                    display: downWard ? "block" : "none",
+                    animation: downWard
+                      ? "open 0.5s ease-in-out"
+                      : "close 0.5s ease-in-out ",
+                  }}
+                >
+                  {people.map(({ id, title }) => {
+                    return (
+                      <div
+                        className="book-table-inputs-right-covered-one"
+                        key={id}
+                        onClick={() => {
+                          setdownWard(() => setdownWard(!downWard));
+                          setSelectQuantity(title);
+                        }}
+                      >
+                        {title}
+                      </div>
+                    );
+                  })}
                 </div>
                 <input type="text" placeholder="Phone Number" /> <br />
                 <input type="phone" placeholder="Email Address" />
@@ -108,7 +141,7 @@ const Reservation = () => {
               type="text"
               className="book-table-coments"
               placeholder="Coments"
-            />{" "}
+            />
             <br />
             <button>BOOK A TABLE</button>
           </div>
